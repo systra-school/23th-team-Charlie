@@ -159,7 +159,8 @@
         </table>
       </div>
       <div id="businessBody">
-        <html:form  action="/shiftMstMntUpdate">
+      <!-- actionの名前がコンフィグと合致してなかったのでコンフィグと合わせました。 -->
+        <html:form  action="/shiftMstMnt.do">
           <div style="width: 600px; margin: 0 auto;">
             <table class="tableHeader">
               <tr>
