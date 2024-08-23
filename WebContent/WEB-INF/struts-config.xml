@@ -73,7 +73,8 @@
         name="loginForm"
         scope="session"
         validate="false">
-        <forward name="success" path="/pages/cmn/menu.jsp"/>
+        <!-- 2024/08/23 pathを修正済み -->
+        <forward name="success" path="/pages/cmn/login.jsp"/>
       </action>
 
       <!-- メニュー -->
