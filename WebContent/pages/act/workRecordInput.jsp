@@ -174,9 +174,19 @@
             </div>
           </div>
           <div  id="data">
-            <div>
-            <table class="tableHeader">
-              <tr>
+          <!-- <div>
+            <table>
+              
+            </table>
+          </div> 
+          
+          2024/08/26 田中 >> テーブルが分かれていたので一つにまとめました。
+          -->
+            
+            <div style="height:450px;  margin-left: 18px ">
+            	
+            	<table class="tableBody">
+            	<tr class="tableHeader">
                 <td width="80px" align="center">
                   日付
                 </td>
@@ -208,13 +218,6 @@
                   備考
                 </td>
               </tr>
-            </table>
-          </div>
-            
-            
-            <div style="height:450px;  margin-left: 18px ">
-            	
-            	<table class="tableBody">
             	<logic:iterate id="workRecordInputList" name="workRecordInputForm" property="workRecordInputList" indexId="idx">
               
                 <tr>
@@ -242,7 +245,8 @@
                     <bean:write name="workRecordInputList" property="symbol" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></bean:write><br>
+                  <%-- 2024/08/23 田中 >> 開始タグと終了タグのbean:writeをhtml:textへ変更しました --%>
+                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="startTime" indexed="true"></html:text><br>
