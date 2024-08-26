@@ -56,9 +56,9 @@ public class ComboListUtilsDao extends Dao {
 
             StringBuffer strSql = new StringBuffer();
             strSql.append("SELECT * FROM m_category ");
-            strSql.append("WHERE category_id = ? ");
+            //strSql.append("WHERE category_id = ? ");
             if (displayBool) {
-                strSql.append("AND display = ? ");
+                strSql.append("where display = ? ");
             }
             strSql.append("ORDER BY display_order ASC ");
 
@@ -66,8 +66,8 @@ public class ComboListUtilsDao extends Dao {
 
             int index = 1;
             // 分類ＩＤ
-            ps.setString(index, mcategorySearch.getCategoryId());
-            index++;
+            //ps.setString(index, mcategorySearch.getCategoryId());
+            //index++;
             // 表示
             if (displayBool) {
                 ps.setBoolean(index, displayBool);
