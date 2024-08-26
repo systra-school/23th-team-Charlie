@@ -112,7 +112,8 @@ public class EmployeeMstMntLogic {
         // 自分をリストから省く
         // 削除対象
         EmployeeMstMntDto removeM_employeeDto = null;
-        m_employeeList = null;
+        //2024/8/26　山内　116行目m_employeeListになるので、コメントアウト
+        //m_employeeList = null;
 
         for (EmployeeMstMntDto m_employeeDto : m_employeeList) {
         	
