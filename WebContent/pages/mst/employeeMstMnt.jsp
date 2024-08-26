@@ -150,11 +150,10 @@
                 </td>
                 <td width="200px" align="center">
                   社員名カナ
+                </td>
+                <td width="100px" align="center">
                   権限
                 </td>
-                
-                  
-                
                 <td width="100px" align="center">
                   削除
                 </td>
@@ -181,7 +180,7 @@
                     <html:text property="employeeNameKana" name="employeeMstMntBeanList"  size="20" maxlength="10" indexed="true" />
                   </td>
                   <td width="100px"  align="center">
-                    <html:select property="authorityId" name="employeeMstMntBeanList" value="<%= selectAuthorityId %>" indexed="true" disabled="true">
+                    <html:select property="authorityId" name="employeeMstMntBeanList" value="<%= selectAuthorityId %>" indexed="true" >
                       <html:optionsCollection name="employeeMstMntForm"
                                               property="authorityCmbMap"
                                               value="key"
