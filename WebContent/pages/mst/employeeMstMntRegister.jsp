@@ -105,10 +105,10 @@
                   パスワード
                 </td>
                 <td width="200px" align="center">
-                  社員名カナ
+                  社員名
                 </td>
                 <td width="200px" align="center">
-                  社員名
+                  社員名カナ
                 </td>
                 <td width="100px" align="center">
                   権限
@@ -125,9 +125,9 @@
                 <td width="200px"  align="center">
                   <html:text property="employeeName" value="" size="20" />
                 </td>
-                
+                <td width="200px"  align="center">
                   <html:text property="employeeNameKana" value="" size="20" />
-               
+               	</td>
                 <td width="100px" align="center">
                   <html:select property="authorityId" value="01">
                     <html:optionsCollection name="employeeMstMntForm"
