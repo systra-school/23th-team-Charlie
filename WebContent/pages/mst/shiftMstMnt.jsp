@@ -105,10 +105,13 @@
                     }
                 }
                 if (!breakTimeErrMsg) {
-                    if (!checkHalfWidthKana(breakTime)) {
+                	/* 8/28 池嵜 下記のコード(!checkHalfWidthKana(breakTime)) →(!checkTime(breakTime))に変更*/
+                    if (!checkTime(breakTime)) {
                         var strArr = ['休憩時間'];
-                        breakTimeErrMsg = getMessage('E-MSG-000006', strArr);
-                        namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'blue';
+                        breakTimeErrMsg = getMessage('E-MSG-000004', strArr);
+                        
+                        //8/28　池嵜　style.backgroundColor = 'red'; がblue→red
+                        namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'red';
                     }
                 }
 
@@ -147,6 +150,7 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
+          
               <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
@@ -197,22 +201,26 @@
                   <td width="230px"  align="center">
                     <table class="full-width">
                       <tr>
+                      <!-- 8/28　池嵜 startTimeとendTimeが逆だった-->
                         <td align="center" class="non-border">
-                          <html:text property="endTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
+                          <html:text property="startTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
                         </td>
                         <td align="center" class="non-border">
                             &#xFF5E;
                         </td>
                         <td align="center" class="non-border">
-                          <html:text property="startTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
+                          <html:text property="endTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
                         </td>
                       </tr>
                     </table>
                   </td>
+                  <!-- 8/28　池嵜　下記のコードに<td>タグを付けました。 -->
+                  <td width="100px"  align="center">
                     <html:text property="breakTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                 
+                 </td>
                   <td width="70px"  align="center">
-                    <html:hidden property="deleteShiftId" name="shiftMstMntBeanList"  value="<%= shiftId %>"  onchange='<%="checkDeleteFlg(" + idx + ")" %>'></html:hidden>
+                  <!-- 8/28 池嵜　下記のコードを「checkbox」タグに変更-->
+                    <html:checkbox property="deleteShiftId" name="shiftMstMntBeanList"  value="<%= shiftId %>"  onchange='<%="checkDeleteFlg(" + idx + ")" %>'></html:checkbox>
                     <html:hidden property="deleteFlg" name="shiftMstMntBeanList" value="false" indexed="true"/>
                   </td>
                 </tr>
