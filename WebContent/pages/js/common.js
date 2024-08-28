@@ -18,6 +18,18 @@ function logout() {
  *  戻るボタンサブミット
  */
 function doSubmit(action) {
+    document.forms[0].action = action;
+    document.forms[0].submit();
+}
+
+/*
+2024/08/28 田中 >>
+戻るボタンサブミットが
+
+function doSubmit(action) {
     document.forms[0].action = "/kikin-for-Struts-bug/logout.do";
     document.forms[0].submit();
 }
+
+となっていたのでURLを引数で受け取っても動作するように変更しました。
+ */
