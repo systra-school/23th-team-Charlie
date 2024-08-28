@@ -120,15 +120,14 @@
         <forward name="success" path="/pages/mst/employeeMstMntRegister.jsp"/>
       </action>
       <!-- 社員マスタメンテナンス 登録 -->
-      <!-- 8/28　山内　EmployeeMstMntRegister→EmployeeMstMntRegisterActioに変更 -->
+      <!-- 8/28　山内　EmployeeMstMntRegister→EmployeeMstMntRegisterActionに変更 -->
       <action
         path="/employeeMstMntRegister"
         type="action.mst.EmployeeMstMntRegisterAction"
         name="employeeMstMntRegisterForm"
         scope="session"
         validate="true">
-        <!-- 8/28　山内　EmployeeMstMntRegister→EmployeeMstMntRegisterActioに変更 -->
-        <forward name="success" path="/employeeMstMntRegister.do"/>
+        <forward name="success" path="/employeeMstMnt.do"/>
       </action>
       <!-- 社員マスタメンテナンス 戻る -->
       <action
