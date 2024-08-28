@@ -40,6 +40,8 @@
         with (document.forms[0]) {
             // パスワード
             var passwordVar = password.value;
+            // 社員名
+            var employeeNameVar = employeeName.value;
             // 社員名カナ
             var employeeNameKanaVar = employeeNameKana.value;
             // エラーメッセージ
@@ -47,6 +49,7 @@
 
             // 背景色をクリアする
             password.style.backgroundColor = 'white';
+            employeeName.style.backgroundColor = 'white';
             employeeNameKana.style.backgroundColor = 'white';
 
             // パスワード
@@ -56,11 +59,18 @@
                 errorMsg += getMessage('E-MSG-000001', strArr);
                 password.style.backgroundColor = 'red';
             }
+            // 社員名
+            if (!checkRequired(employeeNameVar)) {
+                // エラー有り
+                var strArr = ['社員名'];
+                errorMsg += getMessage('E-MSG-000001', strArr);
+                employeeName.style.backgroundColor = 'red';
+            }
             // 社員名カナ
-            if (!checkTime(employeeNameKanaVar)) {
+            if (!checkRequired(employeeNameKanaVar)) {
                 // エラー有り
                 var strArr = ['社員名カナ'];
-                errorMsg += getMessage('E-MSG-000006', strArr);
+                errorMsg += getMessage('E-MSG-000001', strArr);
                 employeeNameKana.style.backgroundColor = 'red';
             }
 
