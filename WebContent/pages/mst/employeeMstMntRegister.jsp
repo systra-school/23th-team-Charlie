@@ -40,7 +40,7 @@
         with (document.forms[0]) {
             // パスワード
             var passwordVar = password.value;
-            // 社員名
+            // 社員名カナ
             var employeeNameVar = employeeName.value;
             // 社員名カナ
             var employeeNameKanaVar = employeeNameKana.value;
@@ -67,10 +67,10 @@
                 employeeName.style.backgroundColor = 'red';
             }
             // 社員名カナ
-            if (!checkRequired(employeeNameKanaVar)) {
+            if (!checkHalfWidthKana(employeeNameKanaVar)) {
                 // エラー有り
                 var strArr = ['社員名カナ'];
-                errorMsg += getMessage('E-MSG-000001', strArr);
+                errorMsg += getMessage('E-MSG-000003', strArr);
                 employeeNameKana.style.backgroundColor = 'red';
             }
 
