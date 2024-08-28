@@ -77,15 +77,13 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-            	<input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
-            
+              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               日別シフト確認画面
             </td>
             <td id="headRight">
-            	<input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
-            
+              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
             </td>
           </tr>
         </table>
