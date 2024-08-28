@@ -51,7 +51,6 @@ function checkTime(str) {
     }
     var vHour = str.substr(0, 2);
     var vMinutes = str.substr(3, 2);
-
     if(vHour >= 0 && vHour <= 99 && vMinutes >= 0 && vMinutes <= 59){
         return true;
     }else{
@@ -68,8 +67,9 @@ function checkTimeCompare(end, start) {
 
     var vStart = start.replace(":", "");
     var vEnd = end.replace(":", "");
-
-    if (vStart <= vEnd) {
+    
+/*8/28　池嵜　不等号が逆でした「<=」→「>」*/
+    if (vStart > vEnd) {
         return true;
     } else {
         return false;
