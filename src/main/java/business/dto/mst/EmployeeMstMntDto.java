@@ -36,9 +36,9 @@ public class EmployeeMstMntDto {
     /** 削除フラグ */
     private boolean deleteFlg;
     
-    
+    //8/28　山内　passwordになっていたものをemployeeIdに変更
 	public String getEmployeeId() {
-		return password;
+		return employeeId;
 	}
 
 	public void setEmployeeId(String employeeId) {
@@ -46,7 +46,8 @@ public class EmployeeMstMntDto {
 	}
 
 	public String getPassword() {
-		return employeeId;
+	    //8/28　山内　employeeIdになっていたものをpasswordに変更
+		return password;
 	}
 
 	public void setPassword(String password) {
