@@ -91,7 +91,13 @@
 	                }
 
 	                // from - to のチェック
+	                
+	                /*
+	                2024/08/28 田中 >> 条件の否定を削除しました。
 	                if (!checkTimeCompare(startTime, endTime)) {
+	                
+	                */
+	                if (checkTimeCompare(startTime, endTime)) {
 	                  if (checkTime(startTime) && checkTime(endTime)) {
 	                      fromToErrMsg = getMessageCodeOnly('E-MSG-000005');
 	                      namedItem('workRecordInputList['+ i +'].startTime').style.backgroundColor = 'red';
@@ -246,10 +252,18 @@
                   </td>
                   <td width="100px" align="center">
                   <%-- 2024/08/23 田中 >> 開始タグと終了タグのbean:writeをhtml:textへ変更しました --%>
+                  <%-- 2024/08/28 田中 >> property="endTime"とproperty="startTime"の上下が入れ替わっていたので修正しました
+                  
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="startTime" indexed="true"></html:text><br>
+                  </td>
+                   --%>
+                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="startTime" indexed="true"></html:text><br>
+                  </td>
+                  <td width="100px" align="center">
+                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="breakTime" indexed="true"></html:text><br>
