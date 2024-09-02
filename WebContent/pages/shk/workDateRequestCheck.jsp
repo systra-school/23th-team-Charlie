@@ -38,7 +38,7 @@
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/workDateRequestCheckSearch.do');
+        doSubmit('/kikin-for-Struts-bug/menu.do');
     }
     /**
      * サブウィンドウを開く
