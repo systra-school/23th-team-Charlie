@@ -66,9 +66,16 @@
                 errorMsg += getMessage('E-MSG-000001', strArr);
                 employeeName.style.backgroundColor = 'red';
             }
-            // 社員名カナ
-            if (!checkHalfWidthKana(employeeNameKanaVar)) {
-                // エラー有り
+			
+            // 2024/09/02　山内　未入力・半角エラーチェック
+	        // 社員名カナ
+            if (!checkRequired(employeeNameKanaVar)) {
+            	 // 未入力エラー有り
+            	var strArr = ['社員名カナ'];
+                errorMsg += getMessage('E-MSG-000001', strArr);
+                employeeNameKana.style.backgroundColor = 'red';
+            }else if (!checkHalfWidthKana(employeeNameKanaVar)) {
+            	// 半角カナエラー有り
                 var strArr = ['社員名カナ'];
                 errorMsg += getMessage('E-MSG-000003', strArr);
                 employeeNameKana.style.backgroundColor = 'red';
@@ -96,12 +103,12 @@
           <tr>
             <td id="headLeft">
               <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMntRegisterBack.do')" />
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
             </td>
             <td id="headCenter">
               社員マスタメンテナンス画面（新規登録）
             </td>
             <td id="headRight">
+           　<input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
             </td>
           </tr>
         </table>
