@@ -108,7 +108,9 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/shiftMstMntRegisterBack.do')" />
+            <!-- 8/28 池嵜 下記のコード　「shiftMstMnt.do」に修正  onclick="doSubmit('/kikin-for-Struts-bug/shiftMstMnt.do')" />
+            -->
+              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/shiftMstMnt.do')" />
             </td>
             <td id="headCenter">
               シフトマスタメンテナンス（新規登録）
@@ -152,13 +154,14 @@
                   <table class="full-width" >
                     <tr>
                       <td align="center" class="non-border">
-                        <html:text property="endTime" size="5" maxlength="10" value=""/>
+                      <!-- 9/2　startTimeとendTimeが逆になっていたので変更 -->
+                        <html:text property="startTime" size="5" maxlength="10" value=""/>
                       </td>
                       <td align="center" class="non-border">
                           &#xFF5E;
                       </td>
                       <td align="center" class="non-border">
-                        <html:text property="startTime" size="5" maxlength="10" value=""/>
+                        <html:text property="endTime" size="5" maxlength="10" value=""/>
                       </td>
                     </tr>
                   </table>
