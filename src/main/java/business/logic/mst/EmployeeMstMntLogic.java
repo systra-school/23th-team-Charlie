@@ -49,7 +49,7 @@ public class EmployeeMstMntLogic {
 
                 if (deleteFlg) {
                     // 削除
-                    employeeMstMntDao.updateEmployeeMst(employeeMstMntDto, loginUserDto);
+                    employeeMstMntDao.deleteEmployeeMst(employeeMstMntDto.getEmployeeId());
                 } else {
                     // 更新
                     employeeMstMntDao.updateEmployeeMst(employeeMstMntDto, loginUserDto);
