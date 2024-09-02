@@ -40,8 +40,7 @@
 				</tr>
 			</table>
 		</div>
-
-
+		
 		<div id="businessBody">
 			<div align="center">
 				<div>ID・パスワードを入力してください。</div>
@@ -50,7 +49,7 @@
 					<html:text property="employeeId" size="16" value="sh0001" />
 					<br />
 					<html:password property="password" size="16" redisplay="false"
-						value="sh0002" />
+						value="sh0001" />
 					<br />
 					<br />
 					<html:submit property="submit" value="ログイン" />
