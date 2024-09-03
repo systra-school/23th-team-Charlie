@@ -87,7 +87,10 @@ public class ShiftMstMntUpdateAction extends Action{
             shiftMstMntForm.setShiftMstMntBeanList(dtoToForm(shiftMstMntDtoList));
         }
 
-        return null;
+//       9/2　池嵜 return null; ←を以下に変更
+          return mapping.findForward(forward);
+
+
     }
 
     /**
