@@ -127,8 +127,11 @@ public class ComboListUtilsDao extends Dao {
             ResultSet rs = ps.executeQuery();
 
             // 取得結果セット
+//            while (rs.next()) {
+//                comboMap.put(rs.getString(M_shift.SHIFT_ID.getName()), rs.getString(M_shift.SHIFT_NAME.getName()));
+//            上記のコードのSHIFT_NAMEをSYMBOLに変更
             while (rs.next()) {
-                comboMap.put(rs.getString(M_shift.SHIFT_ID.getName()), rs.getString(M_shift.SHIFT_NAME.getName()));
+                comboMap.put(rs.getString(M_shift.SHIFT_ID.getName()), rs.getString(M_shift.SYMBOL.getName()));
             }
         } catch (SQLException e) {
             // 例外発生
