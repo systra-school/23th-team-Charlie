@@ -164,7 +164,7 @@
       </div>
       <div id="businessBody">
       <!-- actionの名前がコンフィグと合致してなかったのでコンフィグと合わせました。 -->
-        <html:form  action="/shiftMstMnt.do">
+        <html:form  action="/shiftMstMntUpdata.do">
           <div style="width: 600px; margin: 0 auto;">
             <table class="tableHeader">
               <tr>
