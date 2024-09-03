@@ -49,10 +49,16 @@ public class LoginDao extends Dao {
            
             StringBuffer strSql = new StringBuffer();
             strSql.append("SELECT * FROM m_employee ");
-            strSql.append("WHERE employee_id = 'sh0001' ");
+          //2024/09/03 田中 >> WHERE employee_id = 'sh0001'をWHERE employee_id = ?に変更しました
+            strSql.append("WHERE employee_id = ? ");	
             strSql.append("AND password = ?");
             PreparedStatement ps = connection.prepareStatement(strSql.toString());
-            ps.setString(1, m_employeeDtoSearch.getPassword());
+            /*
+             ps.setString(1, m_employeeDtoSearch.getPassword());の数字の部分を2に変更し、
+             ps.setString(1, m_employeeDtoSearch.getEmployeeId());を追加しました。
+             * */
+            ps.setString(1, m_employeeDtoSearch.getEmployeeId());
+            ps.setString(2, m_employeeDtoSearch.getPassword());
 
             // ログ出力
             log.info(ps);
