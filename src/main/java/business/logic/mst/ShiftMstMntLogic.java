@@ -48,7 +48,8 @@ public class ShiftMstMntLogic {
 
                 if (deleteFlg) {
                     // 削除
-                    shiftMstMntDao.deleteShiftMst(shiftMstMntDto.getShiftName());
+//              9/2 池嵜 	下記のコードがgetShiftName()→getShiftId()に変更
+                    shiftMstMntDao.deleteShiftMst(shiftMstMntDto.getShiftId());
                 } else {
                     // 更新
                     shiftMstMntDao.updateShiftMst(shiftMstMntDto, loginUserDto);
@@ -82,15 +83,16 @@ public class ShiftMstMntLogic {
 
         // シフトマスタDao
         ShiftMstMntDao shiftMstMntDao = new ShiftMstMntDao();
+        
+        
+        	// シフトＩＤを採番する。
+            CommonUtils commonUtils = new CommonUtils();
+            String nextID = commonUtils.getNextId(M_shift.TABLE_NAME.getName());
+            shiftMstMntDto.setShiftId(nextID);
 
-        // シフトＩＤを採番する。
-        CommonUtils commonUtils = new CommonUtils();
-        String nextID = commonUtils.getNextId(M_shift.TABLE_NAME.getName());
-
-        shiftMstMntDto.setShiftId(nextID);
-
-        // 登録
-        shiftMstMntDao.registerShiftMst(shiftMstMntDto, loginUserDto);
+            // 登録
+            shiftMstMntDao.registerShiftMst(shiftMstMntDto, loginUserDto);
+     
 
     }
 
