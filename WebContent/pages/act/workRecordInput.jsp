@@ -275,7 +275,8 @@
                     <bean:write name="workRecordInputList" property="actualWorkTime" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="workRecordInputList"  /><br>
+                  <!-- 2024/09/02 田中 >> property="holidayTime" を追加しました -->
+                    <bean:write name="workRecordInputList" property="holidayTime" /><br>
                   </td>
                   <td width="220px" align="left">
                     <html:text style="text-align:left" size="26" name="workRecordInputList" property="remark" indexed="true">備考がいっぱい</html:text><br>
