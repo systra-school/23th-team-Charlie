@@ -63,6 +63,8 @@
         // パスワードエラーメッセージ
         var passwordErrorMsg = '';
         // 社員名カナエラーメッセージ
+        var employeeNameErrorMsg = '';
+        // 社員名カナエラーメッセージ
         var employeeNameKanaErrorMsg = '';
         var errorMsg = '';
 
@@ -70,11 +72,14 @@
             for (var i = 0; i < listSize; i++) {
                 // パスワードを取得する。
                 var password = namedItem('employeeMstMntBeanList['+ i +'].password').value;
+                // 社員名を取得する。
+                var employeeName = namedItem('employeeMstMntBeanList['+ i +'].employeeName').value;
                 // 社員名カナを取得する。
                 var employeeNameKana = namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').value;
 
                 // 背景色をクリアする
                 namedItem('employeeMstMntBeanList['+ i +'].password').style.backgroundColor = 'white';
+                namedItem('employeeMstMntBeanList['+ i +'].employeeName').style.backgroundColor = 'white';
                 namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').style.backgroundColor = 'white';
 
                 // パスワードチェック
@@ -85,30 +90,49 @@
                         namedItem('employeeMstMntBeanList['+ i +'].password').style.backgroundColor = 'red';
                     }
                 }
+                // 社員名チェック
+                if (!employeeNameErrorMsg) {
+                    if (!checkRequired(employeeName)) {
+                   		// 未入力エラー有り
+                   		var strArr = ['社員名'];
+                        employeeNameErrorMsg = getMessage('E-MSG-000001', strArr);
+                        namedItem('employeeMstMntBeanList['+ i +'].employeeName').style.backgroundColor = 'red';
+                
+                    }
+                }
                 // 社員名カナチェック
                 if (!employeeNameKanaErrorMsg) {
-                    if (!checkHalfWidthKana(employeeNameKana)) {
+                    if (!checkRequired(employeeNameKana)) {
+                   		// 未入力エラー有り
+                   		var strArr = ['社員名カナ'];
+                        employeeNameKanaErrorMsg = getMessage('E-MSG-000001', strArr);
+                        namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').style.backgroundColor = 'red';
+                    }else if (!checkHalfWidthKana(employeeNameKana)) {
+                   		// 半角カナエラー有り
                         var strArr = ['社員名カナ'];
                         employeeNameKanaErrorMsg = getMessage('E-MSG-000003', strArr);
                         namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').style.backgroundColor = 'red';
                     }
                 }
+                
+                
+               
 
-                if (passwordErrorMsg && employeeNameKanaErrorMsg) {
+                if (passwordErrorMsg && employeeNameErrorMsg && employeeNameKanaErrorMsg) {
                     // パスワード 、社員名カナが共にエラーの場合
                     break;
                 }
             }
         }
         // エラーメッセージ
-        errorMsg = passwordErrorMsg + employeeNameKanaErrorMsg;
+        errorMsg = passwordErrorMsg + employeeNameErrorMsg + employeeNameKanaErrorMsg;
 
         if (errorMsg) {
             alert(errorMsg);
             // エラー
             return false;
         }
-
+        document.forms[0].action = "/kikin-for-Struts-bug/employeeMstMntUpdate.do";
         document.forms[0].submit();
     }
     </script>
