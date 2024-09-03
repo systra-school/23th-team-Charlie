@@ -32,7 +32,9 @@
      */
     function register() {
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/baseShiftRegiste.do');
+//         doSubmit('/kikin-for-Struts-bug/baseShiftRegiste.do');
+//         上記コードのbaseShiftRegiste.doをbaseShiftRegister.doに変更
+        doSubmit('/kikin-for-Struts-bug/baseShiftRegister.do');
     }
     </script>
 
@@ -65,7 +67,8 @@
           <%-- 凡例 --%>
           <div id="pattern" style="width:476px; margin-left:80px; float:left">
             <div>
-              <table>
+              <table class="tableHeader">
+              <!-- <table>にclass="tableHeader"を追加 -->
                 <tr>
                   <td width="100px" align="center">
                     シフト名
@@ -133,7 +136,8 @@
                   <td width="50px" align="center">
                     日
                   </td>
-                  <td width="50px" align="center"> </td>
+				<!-- <td width="50px" align="center"> </td> -->
+				<!--  上記のコードは必要ないのでコメントアウト -->
                 </tr>
               </table>
             </div>
@@ -200,7 +204,9 @@
               　
             </td>
             <td id="footRight">
-              <input value="登録"  type="button" class="smallButton"  onclick="registe()" />
+            <input value="登録"  type="button" class="smallButton"  onclick="register()" />
+              <!-- <input value="登録"  type="button" class="smallButton"  onclick="registe()" />
+              2024/08/26　 onclick="registe()を上記のに変更-->
             </td>
           </tr>
         </table>
