@@ -59,8 +59,15 @@ public class WorkRecordDao extends Dao {
 			strSql.append("    shift.break_time_shift AS break_time_shift, ");
 			strSql.append("    (CASE WHEN shift.work_day IS NULL THEN twr.work_day  ");
 			strSql.append("    ELSE shift.work_day END) AS work_day, ");
+			/*
+			2024/08/28 田中 >> twr.end_timeとtwr.start_timeが逆になっていたので修正しました
+			
+			元のデータ
 			strSql.append("    twr.end_time         AS start_time, ");
 			strSql.append("    twr.start_time           AS end_time, ");
+			 */
+			strSql.append("    twr.start_time         AS start_time, ");
+			strSql.append("    twr.end_time           AS end_time, ");
 			strSql.append("    twr.break_time         AS break_time, ");
 			strSql.append("    twr.actual_work_time      AS actual_work_time, ");
 			strSql.append("    twr.over_time      AS over_time, ");
