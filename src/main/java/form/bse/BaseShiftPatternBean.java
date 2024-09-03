@@ -29,11 +29,12 @@ public class BaseShiftPatternBean {
 		this.shiftName = shiftName;
 	}
 	public String getSymbol() {
-		return shiftName;
+		return symbol;
 	}
-	public void setSymbol(String shiftName) {
-		this.shiftName = shiftName;
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
 	}
+//	上記のget,setの名前がshiftNameになっていたのでsymbolに変更
 	public String getTimeZone() {
 		return timeZone;
 	}
