@@ -83,7 +83,9 @@ public class WorkRecordCheckSearchAction extends Action {
         WorkRecordLogic workRecordLogic = new WorkRecordLogic();
 
         // 勤務実績データの取得
-        Map<String, WorkRecordDto> workRecordMap = workRecordLogic.getWorkRecordData(employeeId, yearMonth);
+        // 2024/09/03 田中 >> getWorkRecordData となっていたのを getWorkRecordShiftData に変更しました
+        //					  社員名を変更すると選択した社員のデータがテーブルに反映されるようになりました。
+        Map<String, WorkRecordDto> workRecordMap = workRecordLogic.getWorkRecordShiftData(employeeId, yearMonth);
 
         // セレクトボックスの取得
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
