@@ -53,6 +53,10 @@ public class WorkRecordDao extends Dao {
 			strSql.append("SELECT ");
 			strSql.append("    shift.employee_id         AS employee_id, ");
 			strSql.append("    shift.shift_id         AS shift_id, ");
+			/* 2024/09/04 田中 >> 
+			strSql.append("    shift.shift_name           AS symbol, ");
+			
+			*/
 			strSql.append("    shift.shift_name           AS symbol, ");
 			strSql.append("    shift.start_time_shift AS start_time_shift, ");
 			strSql.append("    shift.end_time_shift   AS end_time_shift,  ");
@@ -81,7 +85,7 @@ public class WorkRecordDao extends Dao {
 			strSql.append("        t_work_record ");
 			strSql.append("    WHERE ");
 			// 2024/08/23 田中 >> "        employee_id = '?' AND "を"        employee_id = ? AND "へ変更
-			strSql.append("        employee_id = ? AND ");	
+			strSql.append("        employee_id = ? AND ");
 			strSql.append("        work_day >= ? AND ");
 			strSql.append("        work_day <= ? ");
 			strSql.append("    UNION   ");
@@ -287,8 +291,15 @@ public class WorkRecordDao extends Dao {
 				workRecordDto.setStartTimeShift(startShift);                                              // 開始時間(シフト)
 				workRecordDto.setEndTimeShift(endShift);                                                  // 終了時間(シフト)
 				workRecordDto.setBreakTimeShift(breakShift);                                              // 休憩時間(シフト)
-				workRecordDto.setStartTime(endTime);                                                    // 開始時間
-				workRecordDto.setEndTime(startTime);                                                        // 終了時間
+				/* 2024/09/03 田中 >>
+				 引数のendTimeとstartTimeが入れ替わっていたので修正しました。
+				 workRecordDto.setStartTime(endTime);
+				workRecordDto.setEndTime(startTime);
+				 */
+				workRecordDto.setStartTime(startTime);                                                    // 開始時間
+				workRecordDto.setEndTime(endTime);                                                        // 終了時間
+				
+				
 				workRecordDto.setBreakTime(breakTime);                                                    // 休憩時間
 				workRecordDto.setActualWorkTime(rs.getString(T_work_record.ACTUAL_WORK_TIME.getName())); // 実働時間
 				workRecordDto.setOverTime(rs.getString(T_work_record.OVER_TIME.getName()));       // 時間外時間
