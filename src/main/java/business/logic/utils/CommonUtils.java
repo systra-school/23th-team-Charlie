@@ -561,7 +561,11 @@ public class CommonUtils {
      * @return show 1ページあたりのデータ表示数
      * @author naraki
      */
-    public static int getMaxPage (int length, int show) {
+    
+    /* 2024/09/04 田中 >>
+    引数を入れ替えました。
+    */
+    public static int getMaxPage (int show,int length) {
         int rtn = 0;
 
         int mod = length % show;
