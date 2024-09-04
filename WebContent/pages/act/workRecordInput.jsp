@@ -96,8 +96,10 @@
 	                2024/08/28 田中 >> 条件の否定を削除しました。
 	                if (!checkTimeCompare(startTime, endTime)) {
 	                
-	                */
+	                2024/09/03 田中 >> 条件が反転するようになったための否定を追加しました。
 	                if (checkTimeCompare(startTime, endTime)) {
+	                */
+	                if (!checkTimeCompare(startTime, endTime)) {
 	                  if (checkTime(startTime) && checkTime(endTime)) {
 	                      fromToErrMsg = getMessageCodeOnly('E-MSG-000005');
 	                      namedItem('workRecordInputList['+ i +'].startTime').style.backgroundColor = 'red';
@@ -176,7 +178,11 @@
             </div>
             <div style="float: left; width: 284px; text-align: left;">
               社員ID&nbsp;<bean:write name="workRecordInputForm" property="employeeId"/>
+              <!-- 2024/09/03 田中 >>
               ：社員名&nbsp;残念エラーです
+              となっていたのを変更しました。
+               -->
+              ：社員名&nbsp;<bean:write name="workRecordInputForm" property="employeeName"/>
             </div>
           </div>
           <div  id="data">
@@ -269,10 +275,12 @@
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="breakTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="workRecordInputList" property="overTime" /><br>
+                  <!-- 2024/09/04 田中 >>
+                  overTimeとactualWorkTimeの順番が入れ替わっていました。 -->
+                    <bean:write name="workRecordInputList" property="actualWorkTime" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="workRecordInputList" property="actualWorkTime" /><br>
+                    <bean:write name="workRecordInputList" property="overTime" /><br>
                   </td>
                   <td width="100px" align="center">
                   <!-- 2024/09/02 田中 >> property="holidayTime" を追加しました -->
