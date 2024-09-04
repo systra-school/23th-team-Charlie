@@ -52,7 +52,9 @@
      * サブウィンドウを開く
      */
     function openWindow(){
-        window.open("https://tomcat.apache.org/?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
+    	/* 下記飛び先がtomcatではない*/
+    	//9/4　池嵜　とび先が異なっていた下記に修正
+        window.open("/kikin-for-Struts-bug/shiftPattern.do?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
     }
     function openSearch(){
     	window.open("/kikin-for-Struts-bug/workDateRequestCheckSubInit.do", "searchPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=1000px, height=600px")
