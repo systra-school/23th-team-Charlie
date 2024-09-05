@@ -87,7 +87,10 @@
                     <td width="100px" align="center">
                       <bean:write property="shiftName" name="baseShiftPatternBeanList"/>
                     </td>
-                   
+                     <td width="150px" align="center">
+                      <bean:write property="symbol" name="baseShiftPatternBeanList"/>
+                    </td>
+<!--                     上記のコードを追加 -->
                     <td width="150px" align="center">
                       <bean:write property="timeZone" name="baseShiftPatternBeanList" filter="false"/>
                     </td>
@@ -99,11 +102,14 @@
               </table>
             </div>
           </div>
-          <div id="data" style="width:614px; margin-left:20px; float:left">
+          <div id="data" style="width:597px; margin-left:20px; float:left">
             <div>
               <table class="tableHeader">
                 <tr>
-                  
+                  <td width="243px" align="center">
+                    社員名
+                  </td>
+<!--                   上記、社員名を追加 -->
                   <td width="50px" align="center">
                     月
                   </td>
@@ -128,12 +134,12 @@
                 </tr>
               </table>
             </div>
-            <div style="height:450px;overflow:auto">
+            <div style="width:615px;height:450px;overflow:auto">
               <table class="tableBody">
                 <logic:iterate id="baseShiftMstMntBeanList" name="baseShiftMstMntForm" property="baseShiftMstMntBeanList" indexId="idx">
                   <tr>
                     <html:hidden name="baseShiftMstMntBeanList" property="employeeId" />
-                    <td width="230px" align="center">
+                    <td width="248px" align="center">
                       <bean:write property="employeeName" name="baseShiftMstMntBeanList"/>
                     </td>
                     <td width="50px" align="center">
