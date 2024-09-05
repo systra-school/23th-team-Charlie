@@ -107,12 +107,12 @@
               </table>
             </div>
           </div>
-          <div id="data" style="width:614px; margin-left:20px; float:left">
+          <div id="data" style="width:597px; margin-left:20px; float:left">
             <div>
               <table class="tableHeader">
                <!-- 曜日が月と火がぎゃくだった -->
                 <tr>
-                  <td width="250px" align="center">
+                  <td width="246px" align="center">
                     社員名
                   </td>
                   <td width="50px" align="center">
@@ -151,13 +151,14 @@
                       <bean:write property="employeeName" name="baseShiftMstMntBeanList"/>
                     </td>
                     <!-- 選択項目がでてこなかったから、出てくるようにロックされてる部分（disabled="true"）をfalseにした -->
+                    <!-- 9/5　山内　プルダウンの送信プロパティのshiftIdOnMondayとshiftIdOnTuesdayが逆だったので入れ替え -->
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnTuesday" name="baseShiftMstMntBeanList" indexed="true" disabled="false">
+                      <html:select property="shiftIdOnMonday" name="baseShiftMstMntBeanList" indexed="true" disabled="false">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnMonday" name="baseShiftMstMntBeanList" indexed="true" disabled="false">
+                      <html:select property="shiftIdOnTuesday" name="baseShiftMstMntBeanList" indexed="true" disabled="false">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
