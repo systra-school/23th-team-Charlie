@@ -133,11 +133,13 @@ public class WorkDateRequestDao extends Dao{
             strSql.append("WHERE ");
             strSql.append("SUBSTRING(year_month_day, 1, 6) = ?) ts  ON ");
             strSql.append("emp.employee_id = ts.employee_id ");
-            strSql.append("WHERE emp.employee_id = 'sh0001' ");
+//           9/5　池嵜　下記コードを必要ないためコメントアウト
+//            strSql.append("WHERE emp.employee_id = 'sh0004' ");
             strSql.append("ORDER BY ");
             strSql.append("employee_id,");
             strSql.append("year_month_day");
-            strSql.append(" limit 90");
+//            9/5 池嵜　下記コードを必要ないのでコメントアウト
+//            strSql.append(" limit 90");
 
             PreparedStatement ps = connection.prepareStatement(strSql.toString());
 
