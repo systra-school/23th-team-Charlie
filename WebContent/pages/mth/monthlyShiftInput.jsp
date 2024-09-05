@@ -22,7 +22,8 @@
 
 <bean:size id="dateBeanListSize" name="monthlyShiftInputForm" property="dateBeanList"/>
 <bean:size id="listSize" name="monthlyShiftInputForm" property="monthlyShiftInputBeanList"/>
-<bean:define id="showLength" value="6" type="java.lang.String"/>
+<!-- showLengthのvalueが6になっていたので16に修正しました。 -->
+<bean:define id="showLength" value="16" type="java.lang.String"/>
 <bean:define id="offset" name="monthlyShiftInputForm" property="offset" />
 <bean:define id="color" value="" type="java.lang.String"/>
 <bean:define id="countPage" name="monthlyShiftInputForm" property="countPage" type="java.lang.Integer"/>
@@ -85,8 +86,15 @@ if (listSize > intShowLength) {
     /**
      * サブウィンドウを開く
      */
+     
+     /* 2024/09/04 田中 >>
+     /kikin-for-Struts-bug/menu.do?param=
+    にっていたので
+    /kikin-for-Struts-bug/shiftPattern.do?param=
+    へ変更しました
+     */
     function openWindow(){
-        window.open("/kikin-for-Struts-bug/menu.do?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
+        window.open("/kikin-for-Struts-bug/shiftPattern.do?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
     }
     </script>
     <title>月別シフト入力画面</title>
@@ -123,7 +131,10 @@ if (listSize > intShowLength) {
                                       label="value"/>
               </html:select>
               <html:link href="/kikin-for-Struts-bug/monthlyShiftInputPage.do?paging=back">前へ</html:link>
-              <html:link href="/kikin-for-Struts-bug/monthlyShiftInputPage.do?paging=back">次へ</html:link>
+              <!-- 2024/09/04 田中 >>
+              次へのリンクのpagingがbackになっていたのでnextへ修正しました。
+               -->
+              <html:link href="/kikin-for-Struts-bug/monthlyShiftInputPage.do?paging=next">次へ</html:link>
               <bean:write name="monthlyShiftInputForm" property="countPage"/>/
               <bean:write name="monthlyShiftInputForm" property="maxPage"/>
             
@@ -429,7 +440,22 @@ if (listSize > intShowLength) {
                                                     label="value"/>
                             </html:select>
                           </td>
+                          
+                          <!-- 2024/09/05 田中 >>
+                          31日目が無かったので追加しました。 -->
+                          
                           <% } %>
+                          <% if (dateBeanListSize >= 31) { %>
+                          <td width="40px" align="center" valign="middle">
+                            <html:select property="shiftId31" name="monthlyShiftInputBeanList" indexed="true">
+                            <html:optionsCollection name="monthlyShiftInputForm"
+                                                    property="shiftCmbMap"
+                                                    value="key"
+                                                    label="value"/>
+                            </html:select>
+                          </td>
+                          <% } %>
+                          <!-- ここまで -->
                           
                         </tr>
                       </logic:iterate>
@@ -450,7 +476,11 @@ if (listSize > intShowLength) {
             <div style="margin-left:50px;white-space: nowrap;">
 	          <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" />
 	          <input value="基本シフト反映" type="button" class="longButton"   onclick="submitImportKihon()"/>
-	          <input value="出勤希望日反映" type="button" class="longButton"  onclick="submitImportKihon()" />
+	          <!-- 2024/09/04 田中 >>
+	          出勤希望日反映のonclickがsubmitImportKihon()になっていたので、
+	          submitWorkDateRequest()に変更しました。
+	           -->
+	          <input value="出勤希望日反映" type="button" class="longButton"  onclick="submitWorkDateRequest()" />
 	        </div>
             </td>
             <td id="footCenter" style="text-align: right;">
