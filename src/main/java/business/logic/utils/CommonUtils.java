@@ -564,8 +564,10 @@ public class CommonUtils {
     
     /* 2024/09/04 田中 >>
     引数を入れ替えました。
+    2024/09/05 田中 >>
+    一部のページの問題ということが判明したため、元に戻しました。
     */
-    public static int getMaxPage (int show,int length) {
+    public static int getMaxPage (int length,int show) {
         int rtn = 0;
 
         int mod = length % show;
