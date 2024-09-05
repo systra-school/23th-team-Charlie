@@ -65,7 +65,11 @@ public class MonthlyShiftDao extends Dao{
             strSql.append("    m_employee emp LEFT OUTER JOIN  ");
             strSql.append("    (SELECT * FROM t_shift WHERE     SUBSTRING(year_month_day, 1, 6) = ?)  ");
             strSql.append("    ts ON emp.employee_id = ts.employee_id ");
-            strSql.append("WHERE emp.employee_name not like '社員%' ");
+            /* 2024/09/04
+            "WHERE emp.employee_name not like '社員%' "となっていたので、
+            コメントアウトしました。
+            */
+            //strSql.append("WHERE emp.employee_name like '社員%' ");
             strSql.append("ORDER BY ");
             strSql.append("    employee_id, ");
             strSql.append("    year_month_day ");
@@ -173,6 +177,9 @@ public class MonthlyShiftDao extends Dao{
             strSql.append("? ");
             strSql.append(",? ");
             strSql.append(",? ");
+            // 2024/09/04 田中 >> プレースホルダが足りなかったので追加しました。
+            strSql.append(",? ");
+            
             strSql.append(", current_timestamp()");
             strSql.append(",? ");
             strSql.append(", current_timestamp()");
