@@ -51,25 +51,33 @@ public class WorkDateRequestInputInitAction extends WorkDateRequestAbstractActio
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest req, HttpServletResponse res) throws Exception {
         log.info(new Throwable().getStackTrace()[0].getMethodName());
+       
         // フォワードキー
         String forward = CommonConstant.SUCCESS;
+        
         // セッション
         HttpSession session = req.getSession();
+        
         // ログインユーザ情報をセッションより取得
         LoginUserDto loginUserDto = (LoginUserDto) session.getAttribute(RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO);
+        
         // フォーム
         WorkDateRequestInputForm workDateRequestInputForm = (WorkDateRequestInputForm) form;
+       
         // 対象年月
         String yearMonth = CommonUtils.getFisicalDay(CommonConstant.YEARMONTH_NOSL);
+       
         // ロジック生成
         WorkDateRequestLogic workDateRequestLogic = new WorkDateRequestLogic();
+        
         // 対象年月の月情報を取得する。
         List<DateBean> dateBeanList = CommonUtils.getDateBeanList(yearMonth);
+        
         // セレクトボックスの取得
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
         Map<String, String> shiftCmbMap = comboListUtils.getComboShift(true);
-        
         Map<String, String> yearMonthCmbMap = comboListUtils.getComboYearMonth(CommonUtils.getFisicalDay(CommonConstant.YEARMONTH_NOSL), 0, ComboListUtilLogic.KBN_YEARMONTH_NEXT, false);
+        
         // シフトIDを取得する
         List<List<WorkDateRequestCheckDto>> workRequestCheckDtoNestedList = workDateRequestLogic.getWorkDateRequestCheckDtoList(yearMonth);
         List<WorkDateRequestInputBean> workDateRequestInputBeanList = new ArrayList<WorkDateRequestInputBean>();
