@@ -94,7 +94,9 @@
           <html:form>
             <div style="height: 20px; margin-left:405px;">
               表示年月：
-              <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=next">前日</html:link>
+<%--               <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=next">前日</html:link> --%>
+<!--               上記のコードを下記のコードに変更 -->
+              <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=back">前日</html:link>
               <bean:write name="dailyShiftForm" property="yearMonthDayDisplay"/>
               <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=next">翌日</html:link>
             </div>
