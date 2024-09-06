@@ -147,7 +147,7 @@
                 <logic:iterate id="baseShiftMstMntBeanList" name="baseShiftMstMntForm" property="baseShiftMstMntBeanList" indexId="idx">
                   <tr>
                     <html:hidden name="baseShiftMstMntBeanList" property="employeeId" />
-                    <td width="250px" align="center">
+                    <td width="255px" align="center">
                       <bean:write property="employeeName" name="baseShiftMstMntBeanList"/>
                     </td>
                     <!-- 選択項目がでてこなかったから、出てくるようにロックされてる部分（disabled="true"）をfalseにした -->
