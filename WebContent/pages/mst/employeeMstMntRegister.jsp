@@ -103,7 +103,8 @@
           <tr>
             <td id="headLeft">
             <!-- 9/6 池嵜　下記コードdoSubmit('/kikin-for-Struts-bug/employeeMstMntRegisterBack.do')→ Backを消しました。-->
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do')" />
+            <%--onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do')" のコードを下記に変更 --%>
+              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMnt.do')" />
             </td>
             <td id="headCenter">
               社員マスタメンテナンス画面（新規登録）
