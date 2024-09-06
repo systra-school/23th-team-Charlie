@@ -68,6 +68,12 @@
 
     </script>
     <title>日別シフト確認画面</title>
+    
+    <%-- 2024/09/06 田中 >>
+    //////////
+    全ての出勤予定時間のtdにbgcolor="LightPink"を追加しました。
+    //////////
+     --%>
 
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
@@ -154,7 +160,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime00">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime00" >
                                 <br>
                               </logic:empty>
@@ -173,7 +179,7 @@
                           </logic:equal>
                           <logic:equal value="false" name="dailyShiftBean" property="boolTime00">
                           <% // 出勤予定外の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center">
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
                               <logic:empty name="dailyShiftBean" property="strTime00" >
                                 <br>
                               </logic:empty>
@@ -189,7 +195,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime01">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime01" >
                                 <br>
                               </logic:empty>
@@ -224,7 +230,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime02">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime02" >
                                 <br>
                               </logic:empty>
@@ -259,7 +265,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime03">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime03" >
                                 <br>
                               </logic:empty>
@@ -294,7 +300,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime04">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime04" >
                                 <br>
                               </logic:empty>
@@ -329,7 +335,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime05">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime05" >
                                 <br>
                               </logic:empty>
@@ -364,7 +370,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime06">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime06" >
                                 <br>
                               </logic:empty>
@@ -399,7 +405,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime07">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime07" >
                                 <br>
                               </logic:empty>
@@ -434,7 +440,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime08">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime08" >
                                 <br>
                               </logic:empty>
@@ -469,7 +475,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime09">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime09" >
                                 <br>
                               </logic:empty>
@@ -504,7 +510,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime10">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime10" >
                                 <br>
                               </logic:empty>
@@ -539,7 +545,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime11">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime11" >
                                 <br>
                               </logic:empty>
@@ -609,7 +615,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime13">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime13" >
                                 <br>
                               </logic:empty>
@@ -679,7 +685,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime15">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime15" >
                                 <br>
                               </logic:empty>
@@ -698,7 +704,10 @@
                           </logic:equal>
                           <logic:equal value="false" name="dailyShiftBean" property="boolTime15">
                           <% // 出勤予定外の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
+                          
+                          <%-- 2024/09/06 田中 >>
+                          ここのtdにbgcolor="LightPink"が入っていたので削除しました。 --%>
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center">
                               <logic:empty name="dailyShiftBean" property="strTime15" >
                                 <br>
                               </logic:empty>
@@ -714,7 +723,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime16">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime16" >
                                 <br>
                               </logic:empty>
@@ -749,7 +758,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime17">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime17" >
                                 <br>
                               </logic:empty>
@@ -784,7 +793,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime18">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime18" >
                                 <br>
                               </logic:empty>
@@ -854,7 +863,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime20">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime20" >
                                 <br>
                               </logic:empty>
@@ -889,7 +898,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime21">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime21" >
                                 <br>
                               </logic:empty>
@@ -924,7 +933,7 @@
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
                           <logic:equal value="true" name="dailyShiftBean" property="boolTime22">
                           <% // 出勤予定の時間帯 %>
-                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" >
+                            <td width="<%=tdWidth %>px" nowrap="nowrap" align="center" bgcolor="LightPink">
                               <logic:empty name="dailyShiftBean" property="strTime22" >
                                 <br>
                               </logic:empty>
