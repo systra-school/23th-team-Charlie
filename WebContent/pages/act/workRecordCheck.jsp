@@ -158,13 +158,16 @@ String color = "";
                   </td>
                   <td width="100px" align="center">
                     <bean:write name="workRecordInputList" property="actualWorkTime" />
-                    <bean:write name="workRecordInputList" property="holidayTime" /><br>
+                    <%-- holidayTimeがここにありました。 --%>
                   </td>
                   <td width="100px" align="center">
                     <bean:write name="workRecordInputList" property="overTime" /><br>
                   </td>
                   <td width="100px" align="center">
-                    
+                  <%-- 2024/09/07 田中 >>
+                  ここにholidayTimeを移動しました。
+                   --%>
+                    <bean:write name="workRecordInputList" property="holidayTime" /><br>
                   </td>
                   <td width="250px" align="left">
                     <bean:write name="workRecordInputList" property="remark" /><br>
