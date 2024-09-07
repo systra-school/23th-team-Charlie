@@ -23,7 +23,10 @@
 <bean:size id="dateBeanListSize" name="workDateRequestCheckForm"  property="dateBeanList"/>
 <bean:define id="offset" name="workDateRequestCheckForm" property="offset" />
 <bean:define id="color" value="" type="java.lang.String"/>
-<bean:define id="showLength" value="18" type="java.lang.String"/>
+<%-- 2024/09/07 田中 >>
+表示人数を20人に変更しました。
+ --%>
+<bean:define id="showLength" value="20" type="java.lang.String"/>
 <bean:define id="symbol" value="" type="java.lang.String"/>
 
 <html lang="ja">

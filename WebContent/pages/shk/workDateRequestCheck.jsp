@@ -23,7 +23,12 @@
 <bean:size id="dateBeanListSize" name="workDateRequestCheckForm"  property="dateBeanList"/>
 <bean:define id="offset" name="workDateRequestCheckForm" property="offset" />
 <bean:define id="color" value="" type="java.lang.String"/>
-<bean:define id="showLength" value="10" type="java.lang.String"/>
+<%-- 2024/09/07 田中 >>
+value="10"になっていたので19に変更しました。
+
+20に変更しました。
+ --%>
+<bean:define id="showLength" value="20" type="java.lang.String"/>
 <bean:define id="symbol" value="" type="java.lang.String"/>
 <html lang="ja">
   <head>
@@ -38,7 +43,10 @@
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/menu.do');
+    	/* 2024/09/07 田中 >>
+    	リンク先が/kikin-for-Struts-bug/menu.doになっていたので変更しました。
+    	*/
+        doSubmit('/kikin-for-Struts-bug/workDateRequestCheckSearch.do');
     }
     /**
      * サブウィンドウを開く
@@ -136,9 +144,9 @@
                         </logic:iterate>
                         </tr>
                         <logic:iterate offset="offset"  length="<%=showLength %>" id="workDateRequestCheckBeanList" name="workDateRequestCheckForm" property="workDateRequestCheckBeanList">
-                        	<tr class="tableBody">                                                
+                        	<tr class="tableBody">
     							<% for(int i = 1; i <= dateBeanListSize; i++) {%>
-    							<td width="40px" align="center" valign="middle" class="tableBody">  
+    							<td width="40px" align="center" valign="middle" class="tableBody">
     								<%if(i < 10){
     									symbol = "symbol0" + i;
     								}else{
@@ -146,7 +154,7 @@
     								} %>
     								<bean:write property="<%=symbol %>" name="workDateRequestCheckBeanList" />
     							</td>
-    							<% } %> 							
+    							<% } %>
 							</tr>
                         </logic:iterate>
                       </table>
