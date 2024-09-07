@@ -112,7 +112,7 @@ String color = "";
                   時間外
                 </td>
                 <td width="100px" align="center">
-                  休日
+                  休日出勤
                 </td>
                 <td width="250px" align="center">
                   備考

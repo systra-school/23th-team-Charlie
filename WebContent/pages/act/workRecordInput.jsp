@@ -224,7 +224,7 @@
                   時間外
                 </td>
                 <td width="100px" align="center">
-                  休日
+                  休日出勤
                 </td>
                 <td width="220px" align="center">
                   備考
