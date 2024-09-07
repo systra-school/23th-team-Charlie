@@ -71,8 +71,15 @@
         var fromToErrMsg = '';
         // エラーメッセージ
         var errorMsg = '';
-
-
+        
+        // 9/7　池嵜　下記追加
+		//　シフト名エラーメッセージ
+		var shiftNameErrorMsg = '';
+        
+		//　シフトシンボルエラーメッセージ
+		var shiftSymbolErrorMsg = '';
+        
+        
         with(document.forms[0].elements) {
 
             for (var i = 0; i < listSize; i++) {
@@ -83,12 +90,39 @@
                 var endTime = namedItem('shiftMstMntBeanList['+ i +'].endTime').value;
                 // 休憩時間を取得する。
                 var breakTime = namedItem('shiftMstMntBeanList['+ i +'].breakTime').value;
-
+                // 9/7　池嵜　下記追加
+                // シフト名取得
+             	var shiftName = namedItem('shiftMstMntBeanList['+ i +'].shiftName').value;
+                //　シフトシンボル取得
+                var symbol = namedItem('shiftMstMntBeanList['+ i +'].symbol').value;
+                
+                
                 // 背景色をクリアする
                 namedItem('shiftMstMntBeanList['+ i +'].startTime').style.backgroundColor = 'white';
                 namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'white';
                 namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'white';
+                // 9/7 池嵜　下記追加
+                namedItem('shiftMstMntBeanList['+ i +'].shiftName').style.backgroundColor = 'white';
+                namedItem('shiftMstMntBeanList['+ i +'].symbol').style.backgroundColor = 'white';
 
+                //9/7　池嵜　新規追加　シフト名、新ボンル名　空欄エラー
+                //シフト名　空欄エラー
+                if (!shiftNameErrorMsg) {
+                    if (!checkRequired(shiftName)) {
+                        var strArr = ['シフト名'];
+                        shiftNameErrorMsg = getMessage('E-MSG-000001', strArr);
+                        namedItem('shiftMstMntBeanList['+ i +'].shiftName').style.backgroundColor = 'red';
+                    }
+                }
+                //シンボル名　空欄エラー
+                if (!shiftSymbolErrorMsg) {
+                    if (!checkRequired(symbol)) {
+                        var strArr = ['シンボル'];
+                        shiftSymbolErrorMsg = getMessage('E-MSG-000001', strArr);
+                        namedItem('shiftMstMntBeanList['+ i +'].symbol').style.backgroundColor = 'red';
+                    }
+                }
+                
                 // 時間チェック
                 if (!startTimeErrMsg) {
                     if (!checkTime(startTime)) {
@@ -123,12 +157,15 @@
                       namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'red';
                   }
                 }
+           
 
             }
         }
-
+        
+        
         // エラーメッセージ
-        errorMsg = startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
+        //9/7 池嵜　「shiftNameErrorMsg」「shiftSymbolErrorMsg」を追加
+        errorMsg = shiftNameErrorMsg + shiftSymbolErrorMsg + startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
 
         if (errorMsg) {
             alert(errorMsg);
