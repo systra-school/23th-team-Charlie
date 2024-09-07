@@ -42,6 +42,13 @@
         var errorMsg = '';
         // From - To エラーメッセージ
         var fromToErrMsg = '';
+        
+        // 9/7　池嵜　下記追加
+		//　シフト名エラーメッセージ
+		var shiftNameErrorMsg = '';
+        
+		//　シフトシンボルエラーメッセージ
+		var shiftSymbolErrorMsg = '';
 
         // 時間チェック
         with (document.forms[0]) {
@@ -51,11 +58,35 @@
           var varEndTime = endTime.value;
           // 休憩時間を取得する。
           var varBreakTime = breakTime.value;
+          
+          // 9/7　池嵜　下記追加
+          // シフト名取得
+       	  var shiftName = shiftName.value;
+          //　シフトシンボル取得
+          var symbol = symbol.value;
+          
 
           // 背景色をクリアする
           startTime.style.backgroundColor = 'white';
           endTime.style.backgroundColor = 'white';
           breakTime.style.backgroundColor = 'white';
+          // 9/7 池嵜 下記追加
+          shiftName.style.backgroundColor = 'white';
+          symbol.style.backgroundColor = 'white';
+          
+          // 9/7　池嵜　下記追加　空欄エラー
+          if (!checkRequired(varStartTime)) {
+              var strArr = ['シフト名'];
+              shiftNameErrorMsg = getMessage('E-MSG-000001', strArr);
+              shiftName.style.backgroundColor = 'red';
+          }
+          
+          // 9/7　池嵜　下記追加　空欄エラー
+          if (!checkRequired(varStartTime)) {
+              var strArr = ['シンボル'];
+              shiftSymbolErrorMsg = getMessage('E-MSG-000001', strArr);
+              symbol.style.backgroundColor = 'red';
+          }
 
           if (!checkTime(varStartTime)) {
               var strArr = ['開始時間'];
@@ -86,7 +117,8 @@
         }
 
         // エラーメッセージ
-        errorMsg = startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
+        //9/7 池嵜　「shiftNameErrorMsg」「shiftSymbolErrorMsg」を追加
+        errorMsg =shiftNameErrorMsg + shiftSymbolErrorMsg + startTimeErrMsg + endTimeErrMsg + breakTimeErrMsg + fromToErrMsg;
 
         if (errorMsg) {
             alert(errorMsg);
