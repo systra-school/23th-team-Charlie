@@ -44,7 +44,11 @@ public class DateBean {
 	public boolean getPublicHolidayFlg() {
 		return publicHolidayFlg;
 	}
+	
+	/* 2024/09/09 田中 >>
+	 publicHolidayFlgのthisに代入する値がfalseになっていたので修正しました。
+	 */
 	public void setPublicHolidayFlg(boolean publicHolidayFlg) {
-		this.publicHolidayFlg = false;
+		this.publicHolidayFlg = publicHolidayFlg;
 	}
 }
