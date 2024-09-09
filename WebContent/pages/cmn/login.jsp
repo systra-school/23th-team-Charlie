@@ -19,6 +19,7 @@
 </head>
 <body>
 
+
 	<%
   if(session.getAttribute("error")!=null){
 	  
@@ -45,15 +46,22 @@
 			<div align="center">
 				<div>ID・パスワードを入力してください。</div>
 				<html:form action="/login" onsubmit="return validateLoginForm(this)">
-
-					<html:text property="employeeId" size="16" value="sh0001" />
+					
+					<%-- 2024/09/09
+					value="sh0001"の値を2つとも削除しました。
+					
+					 --%>
+					<html:text property="employeeId" size="16"/>
 					<br />
-					<html:password property="password" size="16" redisplay="false"
-						value="sh0001" />
+					<html:password property="password" size="16" redisplay="false"/>
 					<br />
 					<br />
 					<html:submit property="submit" value="ログイン" />
-					<html:reset value="リセット" />
+					
+					<%-- 2024/09/09 田中 >>
+					property="reset"を追加しました。 --%>
+					<html:reset property="reset" value="リセット" />
+					
 				</html:form>
 			</div>
 		</div>
