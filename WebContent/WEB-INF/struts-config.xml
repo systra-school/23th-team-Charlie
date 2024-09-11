@@ -36,6 +36,9 @@
       <form-bean name="monthlyShiftCheckForm" type="form.mth.MonthlyShiftCheckForm"/>
       <!-- シフト凡例画面フォーム -->
       <form-bean name="shiftPatternForm" type="form.cmn.ShiftPatternForm"/>
+      
+      <!-- 出勤 -->
+      <form-bean name="workRecordInputForm" type="form.act.WorkRecordInputForm"/>
     </form-beans>
 
     <global-exceptions>
@@ -461,6 +464,17 @@
         scope="session">
         <forward name="success" path="/pages/shk/workDateRequestInput.jsp"/>
       </action>
+      
+            <!-- 出勤 -->
+      <action
+        path="/workAttendanceRegister"
+        type="action.atn.WorkAttendanceRegisterAction"
+        name="workRecordInputForm"
+        scope="session">
+        <forward name="success" path="/pages/cmn/menu.jsp"/>
+      </action>
+      
+      
     </action-mappings>
 
     <controller bufferSize="4096" maxFileSize="256M" tempDir="/pages/sample"/>
