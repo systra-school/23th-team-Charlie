@@ -16,6 +16,10 @@
     <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/message.js"></script>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+</style>
+
     <title>メニュー画面</title>
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
@@ -44,7 +48,7 @@
             </logic:equal>
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+              <input value="ログアウト" type="button" class="mOUTbotan"  onclick="logout()" />
             </td>
           </tr>
         </table>
@@ -54,7 +58,7 @@
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="authorityId"
                      value="<%=CommonConstant.Authority.ADMIN.getId() %>">
-          <div  style="margin-left:15%;margin-top:2%;">
+          <div  style="margin-left:15%;margin-top:3%;">
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
               <input type="submit" value="月別シフト確認" class="mbotan" />
