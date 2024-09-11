@@ -135,6 +135,7 @@
         document.forms[0].action = "/kikin-for-Struts-bug/employeeMstMntUpdate.do";
         document.forms[0].submit();
     }
+    
     </script>
 
     <title>社員マスタメンテナンス画面</title>
@@ -169,13 +170,13 @@
                   社員ＩＤ
                 </td>
                 <td width="200px" align="center">
-                  パスワード
+                  パスワード（6桁）
                 </td>
                 <td width="200px" align="center">
                   社員名
                 </td>
                 <td width="200px" align="center">
-                  社員名カナ
+                  社員名カナ（半角）
                 </td>
                 <td width="100px" align="center">
                   権限
