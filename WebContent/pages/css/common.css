@@ -1,8 +1,23 @@
+/* 画像を動的に表示できるコード↓ */
+
+@keyframes backgroundImageAnimation {
+  0% { background-image: url('/kikin-for-Struts-bug/pages/img/fireworks_00005.jpg'); }
+  33% { background-image: url('/kikin-for-Struts-bug/pages/img/Nagaoka_Fireworks_04.jpg'); }
+  66% { background-image: url('/kikin-for-Struts-bug/pages/img/sddefault.jpg'); }
+  100% { background-image: url('/kikin-for-Struts-bug/pages/img/fireworks_00005.jpg'); }
+}
+body {
+  animation: backgroundImageAnimation 15s infinite; /* 15秒で1周、無限ループ */
+  background-size: cover; /* 背景画像が全体に広がるようにする */
+  background-position: center; /* 背景画像を中央に配置 */
+  background-repeat: no-repeat; /* 背景画像の繰り返しを無効にする */
+}
+
 /*
 * body定義
 */
 body {
-    background-color: #66CCFF;
+    background-color: #e3e3e3;
     overflow: hidden;
     width:100%;
 }
@@ -10,7 +25,8 @@ errorbody {
     background-color: red;
 }
 #wrapper {
-    width:99%;
+	
+    width:100%;
     height:100%;
     padding:0px;
 }
@@ -30,17 +46,20 @@ errorbody {
 */
 #header {
     top: 2px;
-    height: 40px;
+    height: 50px;
 }
 #headLeft {
+	
     width:15%;
     text-align:center;
 }
 #headCenter {
-    font-size: 24px;
+	
+    font-size: 36px;
     color: #FFFF00;
     width:70%;
     text-align:center;
+    padding: 10px;
 
 }
 #headRight {
@@ -51,26 +70,35 @@ errorbody {
 * メニュー画面のボタン
 */
 .menuBlock {
-    margin-left:60px;
+	/*
+	margin-left:60px;
     float:left;
     text-align:center;
     padding:30px;
+    */
+	display: inline;
+    
+}
+
+.menulist{
+	display: inline;
+	
 }
 
 /*
 * 業務body定義
-*/
+
 #businessBody {
     height: 82%;
     overflow: auto;
 }
-
+*/
 /*
 * フッター定義
 */
 #footer {
     bottom: 1%;
-    height: 70px;
+    height: 10px;
     width: 100%;
 }
 #footLeft {
@@ -197,7 +225,9 @@ errorbody {
         border: 1px solid black;
 }
 .full-width {
+	
         width: 100%;
+        
 }
 .nomalTable{
 	border: 0px solid black;
@@ -251,5 +281,88 @@ errorbody {
 */
 .fontRed {
     color: red;
+}
+
+/* 勤退 */
+.realtime{
+	padding:0px;
+	text-align:center;
+	font-size: 40px;
+}
+
+.Kbotan{
+	
+	text-align:center;
+}
+
+
+/* 一般社員　勤退ボタンデザイン　出勤 */
+.s2btn {
+  
+  display: block;
+  height: 68px;
+  line-height: 68px;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: #f15a4a;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0 10px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+  margin-right: 10px;
+ 
+}
+
+/* 一般社員　勤退ボタンデザイン　退勤 */
+.t2btn {
+  
+  display: block;
+  height: 68px;
+  line-height: 68px;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: #f15a4a;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0 10px 0 #a81f0f;
+  border-radius: 50px;
+  text-align: center;
+  width: 200px;
+ 
+}
+/* 一般社員　勤退ボタンホバー */
+.s2btn:hover {
+  margin-top: 0;
+  box-shadow: 0 5px 0 #a81f0f;
+}
+.t2btn:hover {
+  margin-top: 0;
+  box-shadow: 0 5px 0 #a81f0f;
+}
+
+/* 一般社員　勤退ボタン画面レイアウト設定 */
+.K2botan{
+	 width:auto;
+	 display: inline-flex;
+  	
+}
+/* 管理者、一般の名前のデザイン設定 */
+.kname{
+	padding:100px 40px 0px;;
+	color: #39c69b;
+	text-align: center;
+	font-size: 30px;
+}
+
+.Kmnu{
+	
+	width:100%;
+	height:10%;
+	
+	
 }
 
