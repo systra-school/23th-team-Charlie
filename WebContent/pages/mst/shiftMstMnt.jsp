@@ -187,9 +187,11 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-          
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
-            </td>
+          <%--
+          <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+            
+           --%>
+              </td>
             <td id="headCenter">
               シフトマスタメンテナンス
             </td>
@@ -198,7 +200,13 @@
             </td>
           </tr>
         </table>
+        
+      
       </div>
+      <br>
+      <p>
+        <a href="/kikin-for-Struts-bug/menu.do">メニュー</a> > シフトマスタメンテナンス
+      </p>
       <div id="businessBody">
       <!-- actionの名前がコンフィグと合致してなかったのでコンフィグと合わせました。 -->
         <html:form  action="/shiftMstMntUpdata.do">

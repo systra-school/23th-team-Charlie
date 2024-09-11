@@ -142,17 +142,30 @@
             <td id="headLeft">
             <!-- 8/28 池嵜 下記のコード　「shiftMstMnt.do」に修正  onclick="doSubmit('/kikin-for-Struts-bug/shiftMstMnt.do')" />
             -->
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/shiftMstMnt.do')" />
+            <!-- 
+            <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/shiftMstMnt.do')" />
+             -->
+             
+              
             </td>
+            
             <td id="headCenter">
               シフトマスタメンテナンス（新規登録）
             </td>
+            
             <td id="headRight">
               <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
             </td>
           </tr>
         </table>
+        <br>
+        
+      
       </div>
+      <br>
+      <p>
+      <a href="/kikin-for-Struts-bug/menu.do">メニュー</a> > <a href="/kikin-for-Struts-bug/shiftMstMnt.do">シフトマスタメンテナンス</a> > シフトマスタメンテナンス（新規登録）
+      </p>
       <div id="businessBody">
         <html:form action="/shiftMstMntRegister">
           <div style="width: 630px;  margin: 0 auto;">
