@@ -53,11 +53,16 @@
             employeeNameKana.style.backgroundColor = 'white';
 
             // パスワード
+            if (passwordVar.length >= 7) {
+                	var strArr = ['パスワード'];
+                    errorMsg += getMessage('E-MSG-000007', strArr);
+	                password.style.backgroundColor = 'red';
+			}
             if (!checkRequired(passwordVar)) {
                 // エラー有り
-                var strArr = ['パスワード'];
-                errorMsg += getMessage('E-MSG-000001', strArr);
-                password.style.backgroundColor = 'red';
+	            var strArr = ['パスワード'];
+	            errorMsg += getMessage('E-MSG-000001', strArr);
+	            password.style.backgroundColor = 'red';
             }
             // 社員名
             if (!checkRequired(employeeNameVar)) {
