@@ -19,9 +19,12 @@
     <title>メニュー画面</title>
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body><div class="kintai">
+      <%@ include file="/pages/cmn/kintai.jsp" %>
+      </div>
     <div id="wrapper">
-      <div id="header">
+   
+       <div id="header">
         <table class="full-width">
           <tr>
             <td id="headLeft">
@@ -31,13 +34,13 @@
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="authorityId"
                          value="<%=CommonConstant.Authority.ADMIN.getId() %>">
-                　　メニュー(管理者)
+                メニュー(管理者)
             </logic:equal>
 
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="authorityId"
                          value="<%=CommonConstant.Authority.USER.getId() %>">
-                　　メニュー(一般)
+                メニュー(一般)
             </logic:equal>
             </td>
             <td id="headRight">
@@ -46,6 +49,7 @@
           </tr>
         </table>
       </div>
+    
       <div id="businessBody">
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="authorityId"
@@ -97,7 +101,7 @@
           </div>
           </div>
         </logic:equal>
-
+        
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="authorityId"
                      value="<%=CommonConstant.Authority.USER.getId() %>">
