@@ -147,7 +147,6 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               社員マスタメンテナンス
@@ -158,6 +157,9 @@
           </tr>
         </table>
       </div>
+      
+      <br>
+      <p><a href="/kikin-for-Struts-bug/menu.do">メニュー</a> > 社員マスタメンテナンス</p>
       <div id="businessBody">
         <html:form action="/employeeMstMntUpdate">
           <div style="overflow:hidden;  margin: 0 auto; width:1030px;">

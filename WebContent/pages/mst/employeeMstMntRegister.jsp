@@ -109,10 +109,9 @@
             <td id="headLeft">
             <!-- 9/6 池嵜　下記コードdoSubmit('/kikin-for-Struts-bug/employeeMstMntRegisterBack.do')→ Backを消しました。-->
             <%--onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do')" のコードを下記に変更 --%>
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMnt.do')" />
             </td>
             <td id="headCenter">
-              社員マスタメンテナンス画面（新規登録）
+              社員マスタメンテナンス（新規登録）
             </td>
             <td id="headRight">
            　<input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
@@ -120,6 +119,8 @@
           </tr>
         </table>
       </div>
+      <br>
+      <p><a href="/kikin-for-Struts-bug/menu.do">メニュー</a> > <a href="/kikin-for-Struts-bug/employeeMstMnt.do">社員マスタメンテナンス</a> > 社員マスタメンテナンス（新規登録）</p>
       <div id="businessBody">
         <html:form action="/employeeMstMntRegister" >
           <div style="width: 650px;text-align: left;  margin: 0 auto;">
