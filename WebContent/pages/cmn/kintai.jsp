@@ -42,7 +42,7 @@
 				<p id="realtime"></p>
 			</div>
 
-			<p>${emp_str}</p>
+			<p style="text-align: center;">${emp_str}</p>
 			
 			<!-- 勤退ボタン -->
 			<div class="Kbotan">
@@ -50,12 +50,15 @@
 				<a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/uni-1.gif" width="13%"
 					height="auto"></a> 
 					
-					<a href="#"><img alt="退勤"src="/kikin-for-Struts-bug/pages/img/odorukome.gif" width="13%"
+				<a href="#"><img alt="退勤"src="/kikin-for-Struts-bug/pages/img/odorukome.gif" width="13%"
 					height="auto"></a> <br>
 					
 				<div class="K2botan">
-					<input type="submit" value="出勤" class="s2btn" />
-					 <input type="submit" value="退勤" class="t2btn" />
+					<!-- Strutsのhtml:formタグを使用して、出勤ボタンをStrutsアクションに関連付け -->
+    				<html:form action="/workAttendanceRegister">
+        				<input type="submit" value="出勤" class="s2btn" />
+				    </html:form>
+					<input type="submit" value="退勤" class="t2btn" />
 				</div>
 
 

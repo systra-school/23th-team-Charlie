@@ -9,6 +9,8 @@ package business.db.dao.act;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -382,18 +384,18 @@ public class WorkRecordDao extends Dao {
 
 			StringBuffer strSql = new StringBuffer();
 			strSql.append("UPDATE t_work_record SET ");
-			strSql.append("start_time = ?,");
-			strSql.append("end_time = ?,");
-			strSql.append("break_time = ?,");
-			strSql.append("actual_work_time = ?,");
-			strSql.append("over_time = ?,");
-			strSql.append("holiday_work_time = ?,");
-			strSql.append("remark = ?,");
-			strSql.append("updater_employee_id = ?,");
+			strSql.append("start_time = ?,");			// 1
+			strSql.append("end_time = ?,");				// 2
+			strSql.append("break_time = ?,");			// 3
+			strSql.append("actual_work_time = ?,");		// 4
+			strSql.append("over_time = ?,");			// 5
+			strSql.append("holiday_work_time = ?,");	// 6
+			strSql.append("remark = ?,");				// 7
+			strSql.append("updater_employee_id = ?,");	// 8
 			strSql.append("update_datetime = current_timestamp()");
 			strSql.append("WHERE ");
-			strSql.append("employee_id = ?");
-			strSql.append("AND work_day = ?");
+			strSql.append("employee_id = ?");			// 9
+			strSql.append("AND work_day = ?");			// 10
 
 			PreparedStatement ps = connection.prepareStatement(strSql.toString());
 
@@ -482,6 +484,136 @@ public class WorkRecordDao extends Dao {
 			ps.setString(9, workRecordDto.getRemark());
 			ps.setString(10, employeeId);
 			ps.setString(11, employeeId);
+
+			// ログ出力
+			log.info(ps);
+
+			// SQLを実行する
+			ps.executeUpdate();
+
+		} catch (SQLException e) {
+			// 例外発生
+			throw e;
+		}
+	}
+	
+	public void updateStartWork(WorkRecordDto workRecordDto, String employeeId) throws SQLException{
+
+		try {
+			
+
+			
+			StringBuffer strSql = new StringBuffer();
+			strSql.append("UPDATE t_work_record SET ");
+			strSql.append("start_time = ?,");			// 1
+			strSql.append("end_time = ?,");				// 2
+			strSql.append("break_time = ?,");			// 3
+			strSql.append("actual_work_time = ?,");		// 4
+			strSql.append("over_time = ?,");			// 5
+			strSql.append("holiday_work_time = ?,");	// 6
+			strSql.append("remark = ?,");				// 7
+			strSql.append("updater_employee_id = ?,");	// 8
+			strSql.append("update_datetime = current_timestamp()");
+			strSql.append("WHERE ");
+			strSql.append("employee_id = ?");			// 9
+			strSql.append("AND work_day = ?");			// 10
+
+			PreparedStatement ps = connection.prepareStatement(strSql.toString());
+
+			ps.setString(1, workRecordDto.getStartTime());
+			ps.setString(2, workRecordDto.getEndTime());
+			ps.setString(3, workRecordDto.getBreakTime());
+			ps.setString(4, workRecordDto.getActualWorkTime());
+			ps.setString(5, workRecordDto.getOverTime());
+			ps.setString(6, workRecordDto.getHolidayTime());
+			ps.setString(7, workRecordDto.getRemark());
+			ps.setString(8, employeeId);
+			ps.setString(9, workRecordDto.getEmployeeId());
+			ps.setString(10, workRecordDto.getWorkDay());
+
+			// ログ出力
+			log.info(ps);
+
+			// SQLを実行する
+			ps.executeUpdate();
+
+		} catch (SQLException e) {
+			// 例外発生
+			throw e;
+		}
+	}
+
+	
+	public void insertStartWork(String employeeId) throws SQLException{
+
+		try {
+			
+	        // 今日の日付を取得
+	        Date today = new Date();
+	        
+	        // 日付を「yyyyMMdd」の形式でフォーマット
+	        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyyMMdd");
+	        String formattedDate = sdfDate.format(today);
+	        
+	        // 現在の時刻を取得
+	        Date now = new Date();
+	        
+	        // 時間を「HH:mm」の形式でフォーマット
+	        SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm");
+	        String formattedTime = sdfTime.format(now);
+
+			StringBuffer strSql = new StringBuffer();
+			strSql.append("INSERT INTO ");
+			strSql.append("t_work_record ");
+			strSql.append("( ");
+			strSql.append("employee_id, ");
+			strSql.append("work_day, ");
+			strSql.append("start_time, ");
+//			strSql.append("end_time, ");
+//			strSql.append("break_time, ");
+//			strSql.append("actual_work_time, ");
+//			strSql.append("over_time, ");
+//			strSql.append("holiday_work_time, ");
+//			strSql.append("remark, ");
+			strSql.append("creator_employee_id, ");
+			strSql.append("creation_datetime, ");
+			strSql.append("updater_employee_id, ");
+			strSql.append("update_datetime ");
+			strSql.append(") ");
+			strSql.append("VALUES ");
+			strSql.append("( ");
+			strSql.append("? ");
+			strSql.append(",? ");
+			strSql.append(",? ");
+//			strSql.append(",? ");
+//			strSql.append(",? ");
+//			strSql.append(",? ");
+//			strSql.append(",? ");
+//			strSql.append(",? ");	//ここがHolidayTime
+//			strSql.append(",? ");
+			strSql.append(",? ");
+			strSql.append(", current_timestamp() ");
+			strSql.append(",? ");
+			strSql.append(", current_timestamp() ");
+			strSql.append(") ");
+
+			PreparedStatement ps = connection.prepareStatement(strSql.toString());
+
+			ps.setString(1, employeeId);
+			ps.setString(2, formattedDate);
+			ps.setString(3, formattedTime);
+//			ps.setString(4, workRecordDto.getEndTime());
+//			ps.setString(5, workRecordDto.getBreakTime());
+//			ps.setString(6, workRecordDto.getActualWorkTime());
+//			ps.setString(7, workRecordDto.getOverTime());
+			/* 2024/09/05 田中 >>
+			 ps.setString(8, workRecordDto.getActualWorkTime());
+			 となっていたのでHolidayTimeに修正しました。
+			 */
+//			ps.setString(8, workRecordDto.getHolidayTime());
+//			ps.setString(9, workRecordDto.getRemark());
+			ps.setString(4, employeeId);
+			ps.setString(5, employeeId);
 
 			// ログ出力
 			log.info(ps);

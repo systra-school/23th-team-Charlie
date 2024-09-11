@@ -80,7 +80,7 @@ public class WorkRecordLogic {
 	 * @author Kazuya.Naraki
 	 * @throws Exception
 	 */
-	public void registerWorkRecord(List<WorkRecordDto> workRecordDtoList, LoginUserDto loginUserDto) throws Exception {
+	public void registerStartWork(LoginUserDto loginUserDto) throws Exception {
 
 		// 勤務実績Dao
 		WorkRecordDao workRecordDao = new WorkRecordDao();
@@ -91,24 +91,24 @@ public class WorkRecordLogic {
 		connection.setAutoCommit(false);
 
 		try {
-			for (int i = 0; i < workRecordDtoList.size(); i++) {
-
-				WorkRecordDto workRecordDto = workRecordDtoList.get(i);
-				String employeeId = workRecordDto.getEmployeeId();
-				String workDay = workRecordDto.getWorkDay();
-
-				// データが存在するか確認
-				boolean updateFlg = workRecordDao.isData(employeeId, workDay);
-
-				if (updateFlg) {
-					// 更新
-					workRecordDao.updateWorkRecord(workRecordDto, loginUserDto.getEmployeeId());
-				} else {
+//			for (int i = 0; i < workRecordDtoList.size(); i++) {
+//
+//				WorkRecordDto workRecordDto = workRecordDtoList.get(i);
+//				String employeeId = workRecordDto.getEmployeeId();
+//				String workDay = workRecordDto.getWorkDay();
+//
+//				// データが存在するか確認
+//				boolean updateFlg = workRecordDao.isData(employeeId, workDay);
+//
+//				if (updateFlg) {
+//					// 更新
+//					workRecordDao.updateStartWork(workRecordDto, loginUserDto.getEmployeeId());
+//				} else {
 					// 登録
-					workRecordDao.insertWorkRecord(workRecordDto, loginUserDto.getEmployeeId());
-				}
+					workRecordDao.insertStartWork(loginUserDto.getEmployeeId());
+//				}
 
-			}
+//			}
 		} catch (Exception e) {
 			// ロールバック処理
 			connection.rollback();
@@ -238,5 +238,60 @@ public class WorkRecordLogic {
 				workRecordDto.setOverTime(overTime.toString());
 			}
 		}
+	}
+	
+	/**
+	 * 勤務実績データの登録を行う
+	 *
+	 * @param employeeId 社員ID
+	 * @param yearMonth 対象年月
+	 * @return 勤務実績マップ
+	 * @author Kazuya.Naraki
+	 * @throws Exception
+	 */
+	public void registerWorkRecord(List<WorkRecordDto> workRecordDtoList, LoginUserDto loginUserDto) throws Exception {
+
+		// 勤務実績Dao
+		WorkRecordDao workRecordDao = new WorkRecordDao();
+		// コネクション
+		Connection connection = workRecordDao.getConnection();
+
+		// トランザクション処理
+		connection.setAutoCommit(false);
+
+		try {
+			for (int i = 0; i < workRecordDtoList.size(); i++) {
+
+				WorkRecordDto workRecordDto = workRecordDtoList.get(i);
+				String employeeId = workRecordDto.getEmployeeId();
+				String workDay = workRecordDto.getWorkDay();
+
+				// データが存在するか確認
+				boolean updateFlg = workRecordDao.isData(employeeId, workDay);
+
+				if (updateFlg) {
+					// 更新
+					workRecordDao.updateWorkRecord(workRecordDto, loginUserDto.getEmployeeId());
+				} else {
+					// 登録
+					workRecordDao.insertWorkRecord(workRecordDto, loginUserDto.getEmployeeId());
+				}
+
+			}
+		} catch (Exception e) {
+			// ロールバック処理
+			connection.rollback();
+
+			// 切断
+			connection.close();
+
+			throw e;
+		}
+
+		// コミット
+		connection.commit();
+		// 切断
+		connection.close();
+
 	}
 }
