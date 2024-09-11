@@ -54,13 +54,13 @@
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="authorityId"
                      value="<%=CommonConstant.Authority.ADMIN.getId() %>">
-          <div  style="margin-left:15%;">
+          <div  style="margin-left:15%;margin-top:2%;">
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
-              <input type="submit" value="月別シフト確認" class="bigButton" />
+              <input type="submit" value="月別シフト確認" class="mbotan" />
             </html:form>
             <html:form action="/dailyShiftInit">
-              <input type="submit" value="日別シフト確認" class="bigButton" />
+              <input type="submit" value="日別シフト確認" class="mbotan" />
             </html:form>
 
             
@@ -68,36 +68,38 @@
 
           <div class="menuBlock">
             <html:form action="/workRecordCheckInit">
-              <input type="submit" value="勤務実績確認" class="bigButton" />
+              <input type="submit" value="勤務実績確認" class="mbotan" />
             </html:form>
             <html:form action="/workRecordInputInit">
-              <input type="submit" value="勤務実績入力" class="bigButton" />
+              <input type="submit" value="勤務実績入力" class="mbotan" />
             </html:form>
           </div>
 
           <div class="menuBlock">
             <html:form action="/workDateRequestCheckInit">
-              <input type="submit" value="出勤希望日確認" class="bigButton" />
+              <input type="submit" value="出勤希望日確認" class="mbotan" />
             </html:form>
-            <html:form action="/monthlyShiftInputInit">
-              <input type="submit" value="月別シフト入力" class="bigButton" />
-            </html:form>
+           
           </div>
-
-          <div class="menuBlock">
+          
+          </div>
+          <div  style="margin-right:10em; margin-top: -20em; max-width:100%;">
+          <div class="kanriBlock">
+           <html:form action="/monthlyShiftInputInit">
+              <input type="submit" value="月別シフト入力" class="mbotan" />
+            </html:form>
+          
             <html:form action="/employeeMstMnt">
-              <input type="submit" value="社員マスタメンテナンス" class="bigButton" />
+              <input type="submit" value="社員マスタメンテナンス" class="mbotan" />
             </html:form>
             
             <html:form action="/shiftMstMnt">
-              <input type="submit" value="シフトマスタメンテナンス" class="bigButton" />
+              <input type="submit" value="シフトマスタメンテナンス" class="mbotan" />
             </html:form>
            
             <html:form action="/baseShiftInit">
-              <input type="submit" value="基本シフト登録" class="bigButton" />
+              <input type="submit" value="基本シフト登録" class="mbotan" />
             </html:form>
-            
-            
           </div>
           </div>
         </logic:equal>
@@ -109,29 +111,29 @@
           <div  style="margin-left:15%;">
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
-              <input type="submit" value="月別シフト確認" class="bigButton" />
+              <input type="submit" value="月別シフト確認" class="mbotan" />
             </html:form>
             <html:form action="/dailyShiftInit">
-              <input type="submit" value="日別シフト確認" class="bigButton" />
+              <input type="submit" value="日別シフト確認" class="mbotan" />
             </html:form>
           </div>
           
           <div class="menuBlock">
             <html:form action="/workRecordInputInit">
-              <input type="submit" value="勤務実績入力" class="bigButton" />
+              <input type="submit" value="勤務実績入力" class="mbotan" />
             </html:form>
           </div>
 		  
 		  <%--〇 --%>
           <div class="menuBlock">
             <html:form action="/workDateRequestInputInit">
-              <input type="submit" value="出勤希望日入力" class="bigButton" />
+              <input type="submit" value="出勤希望日入力" class="mbotan" />
             </html:form>
           </div>
 
           <div class="menuBlock">
             <html:form action="/baseShiftCheckInit">
-              <input type="submit" value="基本シフト確認" class="bigButton" />
+              <input type="submit" value="基本シフト確認" class="mbotan" />
             </html:form>
           </div>
 
