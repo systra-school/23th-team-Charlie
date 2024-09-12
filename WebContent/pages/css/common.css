@@ -290,9 +290,9 @@ errorbody {
 
 /* 勤退 */
 .realtime{
-	
+	padding:0px;
 	text-align:center;
-	font-size: 30px;
+	font-size: 40px;
 	color: #4f3b00;
 	font-family: "M PLUS Rounded 1c", sans-serif;
 	font-weight: 500;
@@ -307,8 +307,8 @@ errorbody {
 /* 一般社員　勤退ボタンデザイン　出勤 */
 .s2btn {
   display: block;
-  height: 63px;
-  line-height: 63px;
+  height: 68px;
+  line-height: 68px;
   font-size: 24px;
   text-decoration: none;
   background-color: #f15a4a;
@@ -328,8 +328,8 @@ errorbody {
 .t2btn {
   
   display: block;
-  height: 63px;
-  line-height: 63px;
+  height: 68px;
+  line-height: 68px;
   font-size: 24px;
   text-decoration: none;
   background-color: #f15a4a;
@@ -361,7 +361,7 @@ errorbody {
 }
 /* 管理者、一般の名前のデザイン設定 */
 .kname{
-	padding:75px 40px 1px;
+	padding:130px 40px 0px;
 	color: #4f3b00;
 	text-align: center;
 	font-size: 30px;
@@ -380,7 +380,7 @@ errorbody {
   color: #fff;
   cursor: pointer;
   margin-top: -5px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #a81f0f;
   border-radius: 50px;
   text-align: center;
   width: 200px;
@@ -397,33 +397,45 @@ errorbody {
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #f15a4a;
-  color: #fff;
+  background-color: #ffffee;
+  color: #400040;
   cursor: pointer;
-  margin-top: -5px;
-  box-shadow: 0 5px 0 #a81f0f;
+  margin-top: -2px;
+  box-shadow: 0 2px 0 #757266;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
+  width: 120px;
+  transition: .1s;
+}
+.mOUTbotan:hover {
+  margin-top: 0;
+  background-color: #f15a4a;
+  box-shadow: 0 0 0 #757266;
+  color: #fff;
 }
 .ModoruBotan{
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #d6a51b;
-  color: #fff;
+  background-color: #ffff53;
+  color: #400040;
   cursor: pointer;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left:120px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
-  
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;
+}
+.ModoruBotan:hover {
+  margin-top: 0;
+  box-shadow: 0 0 0 #a81f0f;
 }
 
 /*登録ボタンと印刷ボタンのデザイン */
@@ -431,18 +443,23 @@ errorbody {
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #d6a51b;
+  background-color: #3131ff;
   color: #fff;
   cursor: pointer;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left:120px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
-  
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;  
+}
+.TourokuPrintBotan:hover {
+  margin-top: 0;
+  box-shadow: 0 0 0 #a81f0f;
 }
 
 /*凡例表示ボタンのデザイン */
@@ -450,37 +467,45 @@ errorbody {
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #d6a51b;
-  color: #fff;
+  background-color: #ffffee;
+  color: #400040;
   cursor: pointer;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left:120px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #757266;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
-  
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
-
+.HanreiBotan:hover {
+  margin-top: 0;
+  box-shadow: 0 0 0 #757266;
+}
 /* 新規登録ボタンのデザイン */
 .SinkiBotan{
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #d6a51b;
-  color: #fff;
+  background-color: #d7f187;
+  color: #400040;
   cursor: pointer;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left:120px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
-  
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;
+}
+.SinkiBotan:hover {
+  margin-top: 0;
+  box-shadow: 0 0px 0 #a81f0f;
 }
 
 /* 更新ボタンのデザイン */
@@ -488,37 +513,46 @@ errorbody {
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #d6a51b;
-  color: #fff;
+  background-color: #d7f187;
+  color: #400040;
   cursor: pointer;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left:120px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
-  
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;
 }
-
+.KousinBotan:hover {
+  margin-top: 0;
+  box-shadow: 0 0px 0 #a81f0f;
+}
 /* 基本シフト、出勤希望ボタンのデザイン */
 .HanneiBotan{
   display: block;
   height: 30px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 17px;
   text-decoration: none;
-  background-color: #d6a51b;
-  color: #fff;
+  background-color: #d7f187;
+  color: #400040;
   cursor: pointer;
-  margin-top: -5px;
+  margin-top: -2px;
   margin-left:120px;
-  box-shadow: 0 5px 0 #a81f0f;
+  box-shadow: 0 2px 0 #757266;
   border-radius: 5px;
   text-align: center;
-  width: 100px;
-  
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;
+}
+.HanneiBotan:hover {
+  margin-top: 0;
+  box-shadow: 0 0px 0 #a81f0f;
 }
 .rogo{
 	font-family: "Kaisei HarunoUmi", serif;
