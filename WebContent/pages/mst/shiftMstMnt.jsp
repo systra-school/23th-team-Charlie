@@ -196,7 +196,7 @@
               シフトマスタメンテナンス
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+              <input value="ログアウト" type="button" class="mOUTbotan"  onclick="logout()" />
             </td>
           </tr>
         </table>
