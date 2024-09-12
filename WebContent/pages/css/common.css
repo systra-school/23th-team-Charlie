@@ -290,9 +290,9 @@ errorbody {
 
 /* 勤退 */
 .realtime{
-	padding:0px;
+	
 	text-align:center;
-	font-size: 40px;
+	font-size: 30px;
 	color: #4f3b00;
 	font-family: "M PLUS Rounded 1c", sans-serif;
 	font-weight: 500;
@@ -307,8 +307,8 @@ errorbody {
 /* 一般社員　勤退ボタンデザイン　出勤 */
 .s2btn {
   display: block;
-  height: 68px;
-  line-height: 68px;
+  height: 63px;
+  line-height: 63px;
   font-size: 24px;
   text-decoration: none;
   background-color: #f15a4a;
@@ -328,8 +328,8 @@ errorbody {
 .t2btn {
   
   display: block;
-  height: 68px;
-  line-height: 68px;
+  height: 63px;
+  line-height: 63px;
   font-size: 24px;
   text-decoration: none;
   background-color: #f15a4a;
@@ -361,7 +361,7 @@ errorbody {
 }
 /* 管理者、一般の名前のデザイン設定 */
 .kname{
-	padding:130px 40px 0px;;
+	padding:75px 40px 1px;
 	color: #4f3b00;
 	text-align: center;
 	font-size: 30px;
@@ -519,4 +519,21 @@ errorbody {
   text-align: center;
   width: 100px;
   
+}
+.rogo{
+	font-family: "Kaisei HarunoUmi", serif;
+	font-size: 30px;
+	margin-top:20px;
+	margin-left: 40px;
+}
+#headCenter2 {
+	
+    font-size: 36px;
+    color: #4f3b00;
+    width:70%;
+    text-align:center;
+    padding: 1px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 800;
+
 }
