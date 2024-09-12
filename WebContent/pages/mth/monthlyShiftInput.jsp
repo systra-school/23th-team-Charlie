@@ -475,13 +475,21 @@ if (listSize > intShowLength) {
             <td id="footLeft">
             <div style="margin-left:50px;white-space: nowrap;">
 	          <input value="凡例表示" type="button" class="HanreiBotan"  onclick="openWindow()" />
-	          <input value="基本シフト反映" type="button" class="HanneiBotan"   onclick="submitImportKihon()"/>
+	          
 	          <!-- 2024/09/04 田中 >>
 	          出勤希望日反映のonclickがsubmitImportKihon()になっていたので、
 	          submitWorkDateRequest()に変更しました。
 	           -->
-	          <input value="出勤希望日反映" type="button" class="HanneiBotan"  onclick="submitWorkDateRequest()" />
+	          
 	        </div>
+	        
+	        
+            </td>
+            <td>
+            <input value="基本シフト反映" type="button" class="HanneiBotan"   onclick="submitImportKihon()"/>
+            </td>
+            <td>
+            <input value="出勤希望日反映" type="button" class="HanneiBotan"  onclick="submitWorkDateRequest()" />
             </td>
             <td id="footCenter" style="text-align: right;">
 

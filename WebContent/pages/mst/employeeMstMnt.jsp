@@ -235,6 +235,8 @@
             </td>
             <td id="footRight">
               <input value="新規登録" type="button" class="SinkiBotan"  onclick="employeeMstMntRegisterInit()" />
+             </td>
+             <td> 
               <input value="更新" type="button" class="KousinBotan"  onclick="employeeMstMntUpdate()" />
             </td>
           </tr>

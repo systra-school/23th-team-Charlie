@@ -18,16 +18,20 @@
 <%@taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
-<bean:size id="beanListSize" name="shiftMstMntForm" property="shiftMstMntBeanList"/>
+<bean:size id="beanListSize" name="shiftMstMntForm"
+	property="shiftMstMntBeanList" />
 <html lang="ja">
-  <head>
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/message.js"></script>
-    <script type="text/javascript">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<script type="text/javascript"
+	src="/kikin-for-Struts-bug/pages/js/common.js"></script>
+<script type="text/javascript"
+	src="/kikin-for-Struts-bug/pages/js/checkCommon.js"></script>
+<script type="text/javascript"
+	src="/kikin-for-Struts-bug/pages/js/message.js"></script>
+<script type="text/javascript">
     /**
      * チェックボックスがチェックされたら true、されていなければ false
      * param index 対象行番号
@@ -59,7 +63,7 @@
     function shiftMstMntUpdate() {
 
         // 一覧のサイズ
-        var listSize = <%= beanListSize %>;
+        var listSize = <%=beanListSize%>;
 
         // 開始時間エラーメッセージ
         var startTimeErrMsg = '';
@@ -177,119 +181,109 @@
     }
     </script>
 
-    <title>シフトマスタメンテナンス画面</title>
+<title>シフトマスタメンテナンス画面</title>
 
-    <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="header">
-        <table class="full-width">
-          <tr>
-            <td id="headLeft">
-          <%--
+<link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<table class="full-width">
+				<tr>
+					<td id="headLeft">
+						<%--
           <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             
            --%>
-              </td>
-            <td id="headCenter">
-              シフトマスタメンテナンス
-            </td>
-            <td id="headRight">
-              <input value="ログアウト" type="button" class="mOUTbotan"  onclick="logout()" />
-            </td>
-          </tr>
-        </table>
-        
-      
-      </div>
-      <br>
-      <p>
-        <a href="/kikin-for-Struts-bug/menu.do">メニュー</a> > シフトマスタメンテナンス
-      </p>
-      <div id="businessBody">
-      <!-- actionの名前がコンフィグと合致してなかったのでコンフィグと合わせました。 -->
-        <html:form  action="/shiftMstMntUpdata.do">
-          <div style="width: 600px; margin: 0 auto;">
-            <table class="tableHeader">
-              <tr>
-                <td width="100px" align="center">
-                  シフト名
-                </td>
-                <td width="70px" align="center">
-                  シンボル
-                </td>
-                <td width="230px" align="center">
-                  時間
-                </td>
-                <td width="100px" align="center">
-                  休憩
-                </td>
-                <td width="70px" align="center">
-                  削除
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div style="overflow: auto; height: 80%; width: 600px; margin: 0 auto;">
-            <table class="tableBody">
-              <logic:iterate indexId="idx" id="shiftMstMntBeanList" name="shiftMstMntForm"  property="shiftMstMntBeanList">
-              <bean:define id="shiftId" name= "shiftMstMntBeanList" property="shiftId" type="java.lang.String"/>
-                <tr>
-                  <td width="100px"  align="center">
-                    <html:text property="shiftName" name="shiftMstMntBeanList" size="5" maxlength="10" indexed="true"/>
-                    <html:hidden property="shiftId" name="shiftMstMntBeanList" indexed="true"/>
-                  </td>
-                  <td width="70px"  align="center">
-                    <html:text property="symbol" name="shiftMstMntBeanList"  size="1" maxlength="2" indexed="true"/>
-                  </td>
-                  <td width="230px"  align="center">
-                    <table class="full-width">
-                      <tr>
-                      <!-- 8/28　池嵜 startTimeとendTimeが逆だった-->
-                        <td align="center" class="non-border">
-                          <html:text property="startTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                        </td>
-                        <td align="center" class="non-border">
-                            &#xFF5E;
-                        </td>
-                        <td align="center" class="non-border">
-                          <html:text property="endTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                  <!-- 8/28　池嵜　下記のコードに<td>タグを付けました。 -->
-                  <td width="100px"  align="center">
-                    <html:text property="breakTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                 </td>
-                  <td width="70px"  align="center">
-                  <!-- 8/28 池嵜　下記のコードを「checkbox」タグに変更-->
-                    <html:checkbox property="deleteShiftId" name="shiftMstMntBeanList"  value="<%= shiftId %>"  onchange='<%="checkDeleteFlg(" + idx + ")" %>'></html:checkbox>
-                    <html:hidden property="deleteFlg" name="shiftMstMntBeanList" value="false" indexed="true"/>
-                  </td>
-                </tr>
-              </logic:iterate>
-            </table>
-          </div>
-        </html:form>
-      </div>
-      <div id="footer">
-        <table>
-          <tr>
-            <td id="footLeft">
-              　
-            </td>
-            <td id="footCenter">
-              　
-            </td>
-            <td id="footRight">
-              <input value="新規登録" type="button" class="TourokuPrintBotan"  onclick="shiftMstMntRegisterInit()" />
-              <input value="更新" type="button" class="KousinBotan"  onclick="shiftMstMntUpdate()" />
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </body>
+					</td>
+					<td id="headCenter">シフトマスタメンテナンス</td>
+					<td id="headRight"><input value="ログアウト" type="button"
+						class="mOUTbotan" onclick="logout()" /></td>
+				</tr>
+			</table>
+
+
+		</div>
+		<br>
+		<p>
+			<a href="/kikin-for-Struts-bug/menu.do">メニュー</a> > シフトマスタメンテナンス
+		</p>
+		<div id="businessBody">
+			<!-- actionの名前がコンフィグと合致してなかったのでコンフィグと合わせました。 -->
+			<html:form action="/shiftMstMntUpdata.do">
+				<div style="width: 600px; margin: 0 auto;">
+					<table class="tableHeader">
+						<tr>
+							<td width="100px" align="center">シフト名</td>
+							<td width="70px" align="center">シンボル</td>
+							<td width="230px" align="center">時間</td>
+							<td width="100px" align="center">休憩</td>
+							<td width="70px" align="center">削除</td>
+						</tr>
+					</table>
+				</div>
+				<div
+					style="overflow: auto; height: 80%; width: 600px; margin: 0 auto;">
+					<table class="tableBody">
+						<logic:iterate indexId="idx" id="shiftMstMntBeanList"
+							name="shiftMstMntForm" property="shiftMstMntBeanList">
+							<bean:define id="shiftId" name="shiftMstMntBeanList"
+								property="shiftId" type="java.lang.String" />
+							<tr>
+								<td width="100px" align="center"><html:text
+										property="shiftName" name="shiftMstMntBeanList" size="5"
+										maxlength="10" indexed="true" /> <html:hidden
+										property="shiftId" name="shiftMstMntBeanList" indexed="true" />
+								</td>
+								<td width="70px" align="center"><html:text
+										property="symbol" name="shiftMstMntBeanList" size="1"
+										maxlength="2" indexed="true" /></td>
+								<td width="230px" align="center">
+									<table class="full-width">
+										<tr>
+											<!-- 8/28　池嵜 startTimeとendTimeが逆だった-->
+											<td align="center" class="non-border"><html:text
+													property="startTime" name="shiftMstMntBeanList" size="5"
+													maxlength="5" indexed="true" /></td>
+											<td align="center" class="non-border">&#xFF5E;</td>
+											<td align="center" class="non-border"><html:text
+													property="endTime" name="shiftMstMntBeanList" size="5"
+													maxlength="5" indexed="true" /></td>
+										</tr>
+									</table>
+								</td>
+								<!-- 8/28　池嵜　下記のコードに<td>タグを付けました。 -->
+								<td width="100px" align="center"><html:text
+										property="breakTime" name="shiftMstMntBeanList" size="5"
+										maxlength="5" indexed="true" /></td>
+								<td width="70px" align="center">
+									<!-- 8/28 池嵜　下記のコードを「checkbox」タグに変更--> <html:checkbox
+										property="deleteShiftId" name="shiftMstMntBeanList"
+										value="<%=shiftId%>"
+										onchange='<%="checkDeleteFlg(" + idx + ")"%>'></html:checkbox>
+									<html:hidden property="deleteFlg" name="shiftMstMntBeanList"
+										value="false" indexed="true" />
+								</td>
+							</tr>
+						</logic:iterate>
+					</table>
+				</div>
+			</html:form>
+		</div>
+		<div id="footer">
+			<table>
+				<tr>
+					<td id="footLeft"></td>
+					<td id="footCenter"></td>
+					<td id="footRight"><input value="新規登録" type="button"
+						class="TourokuPrintBotan" onclick="shiftMstMntRegisterInit()" />
+					</td>
+					<td><input value="更新" type="button" class="KousinBotan"
+						onclick="shiftMstMntUpdate()" /></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
 </html>

@@ -198,6 +198,8 @@ if (listSize > intShowLength) {
           <tr>
             <td id="footLeft">
               <input value="凡例表示" type="button" class="HanreiBotan"  onclick="openWindow()" />
+              </td>
+              <td>
               <input value="印刷" type="button" class="TourokuPrintBotan"  onclick="submitPrint()" />
             </td>
             <td id="footCenter" style="text-align: right;">
