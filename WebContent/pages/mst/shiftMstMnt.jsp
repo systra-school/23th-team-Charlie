@@ -284,8 +284,8 @@
               　
             </td>
             <td id="footRight">
-              <input value="新規登録" type="button" class="smallButton"  onclick="shiftMstMntRegisterInit()" />
-              <input value="更新" type="button" class="smallButton"  onclick="shiftMstMntUpdate()" />
+              <input value="新規登録" type="button" class="TourokuPrintBotan"  onclick="shiftMstMntRegisterInit()" />
+              <input value="更新" type="button" class="KousinBotan"  onclick="shiftMstMntUpdate()" />
             </td>
           </tr>
         </table>

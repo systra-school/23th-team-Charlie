@@ -171,7 +171,7 @@ value="10"になっていたので19に変更しました。
             <td id="footLeft">
 	          <div style="margin-left:50px;">
 	          <!--  9/5　池嵜　下記コード　javaスクリプトとび先名前がopenDow()→openWindow()に変更-->
-	            <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" />
+	            <input value="凡例表示" type="button" class="HanreiBotan"  onclick="openWindow()" />
 	          </div>
             </td>
             <td id="footCenter">

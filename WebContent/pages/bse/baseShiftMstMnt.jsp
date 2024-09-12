@@ -50,18 +50,18 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="mOUTbotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               基本シフト登録
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+              <input value="ログアウト" type="button" class="mOUTbotan"  onclick="logout()" />
             </td>
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody">	
         <html:form action="/baseShiftRegister" >
           <div class="centered-container">
           <%-- 凡例 --%>
@@ -205,7 +205,7 @@
               　
             </td>
             <td id="footRight">
-            <input value="登録"  type="button" class="smallButton"  onclick="register()" />
+            <input value="登録"  type="button" class="TourokuPrintBotan"  onclick="register()" />
               <!-- <input value="登録"  type="button" class="smallButton"  onclick="registe()" />
               2024/08/26　 onclick="registe()を上記のに変更-->
             </td>
