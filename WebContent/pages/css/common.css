@@ -425,3 +425,98 @@ errorbody {
   width: 100px;
   
 }
+
+/*登録ボタンと印刷ボタンのデザイン */
+.TourokuPrintBotan{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #d6a51b;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left:120px;
+  box-shadow: 0 5px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  
+}
+
+/*凡例表示ボタンのデザイン */
+.HanreiBotan{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #d6a51b;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left:120px;
+  box-shadow: 0 5px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  
+}
+
+/* 新規登録ボタンのデザイン */
+.SinkiBotan{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #d6a51b;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left:120px;
+  box-shadow: 0 5px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  
+}
+
+/* 更新ボタンのデザイン */
+.KousinBotan{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #d6a51b;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left:120px;
+  box-shadow: 0 5px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  
+}
+
+/* 基本シフト、出勤希望ボタンのデザイン */
+.HanneiBotan{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #d6a51b;
+  color: #fff;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left:120px;
+  box-shadow: 0 5px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 100px;
+  
+}
