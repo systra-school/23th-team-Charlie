@@ -107,7 +107,7 @@ if (listSize > intShowLength) {
         <table  class="centered-container">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               月別シフト入力
@@ -495,7 +495,7 @@ if (listSize > intShowLength) {
 
             </td>
             <td id="footRight">
-              <input value="登録" type="button" class="TourokuPrintBotan"  onclick="submitRegister()" />
+              <input value="登 録" type="button" class="TourokuPrintBotan"  onclick="submitRegister()" />
             </td>
           </tr>
         </table>

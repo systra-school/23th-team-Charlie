@@ -421,7 +421,7 @@ errorbody {
   line-height: 20px;
   font-size: 17px;
   text-decoration: none;
-  background-color: #ffff53;
+  background-color: #d7f187;
   color: #400040;
   cursor: pointer;
   margin-top: -2px;
@@ -435,7 +435,9 @@ errorbody {
 }
 .ModoruBotan:hover {
   margin-top: 0;
+  background-color: #ffffee;
   box-shadow: 0 0 0 #a81f0f;
+  color: #400040;
 }
 
 /*登録ボタンと印刷ボタンのデザイン */
@@ -445,8 +447,8 @@ errorbody {
   line-height: 20px;
   font-size: 17px;
   text-decoration: none;
-  background-color: #3131ff;
-  color: #fff;
+  background-color: #d7f187;
+  color: #400040;
   cursor: pointer;
   margin-top: -2px;
   margin-left:120px;
@@ -459,7 +461,9 @@ errorbody {
 }
 .TourokuPrintBotan:hover {
   margin-top: 0;
+  background-color: #0080ff;
   box-shadow: 0 0 0 #a81f0f;
+  color: #fff;
 }
 
 /*凡例表示ボタンのデザイン */
@@ -546,7 +550,7 @@ errorbody {
   box-shadow: 0 2px 0 #757266;
   border-radius: 5px;
   text-align: center;
-  width: 120px;
+  width: 160px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   transition: .1s;
 }

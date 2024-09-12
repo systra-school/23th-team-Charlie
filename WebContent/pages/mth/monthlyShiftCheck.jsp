@@ -85,7 +85,7 @@ if (listSize > intShowLength) {
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               月別シフト確認
@@ -200,7 +200,7 @@ if (listSize > intShowLength) {
               <input value="凡例表示" type="button" class="HanreiBotan"  onclick="openWindow()" />
               </td>
               <td>
-              <input value="印刷" type="button" class="TourokuPrintBotan"  onclick="submitPrint()" />
+              <input value="印 刷" type="button" class="TourokuPrintBotan"  onclick="submitPrint()" />
             </td>
             <td id="footCenter" style="text-align: right;">
             </td>
