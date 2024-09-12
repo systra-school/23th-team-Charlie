@@ -65,7 +65,7 @@ value="10"になっていたので19に変更しました。
         <table  class="centered-container">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               出勤希望確認

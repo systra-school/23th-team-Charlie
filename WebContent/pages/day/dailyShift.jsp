@@ -83,7 +83,7 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               日別シフト確認画面
@@ -113,7 +113,7 @@
                     <table class="tableHeader">
                       <tr>
                         <td width="<%=tdWidth %>px" nowrap="nowrap" align="center">
-                        時間
+                        時 間
                         </td>
                       </tr>
                     </table>

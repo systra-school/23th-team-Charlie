@@ -50,7 +50,7 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               基本シフト登録
@@ -77,10 +77,10 @@
                     シンボル
                   </td>
                   <td width="150px" align="center">
-                    時間
+                    時 間
                   </td>
                   <td width="50px" align="center">
-                    休憩
+                    休 憩
                   </td>
                 </tr>
               </table>
@@ -205,7 +205,7 @@
               　
             </td>
             <td id="footRight">
-            <input value="登録"  type="button" class="TourokuPrintBotan"  onclick="register()" />
+            <input value="登 録"  type="button" class="TourokuPrintBotan"  onclick="register()" />
               <!-- <input value="登録"  type="button" class="smallButton"  onclick="registe()" />
               2024/08/26　 onclick="registe()を上記のに変更-->
             </td>

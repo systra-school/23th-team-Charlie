@@ -153,7 +153,7 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               勤務実績入力
@@ -200,10 +200,10 @@
             	<table class="tableBody">
             	<tr class="tableHeader">
                 <td width="80px" align="center">
-                  日付
+                  日 付
                 </td>
                 <td width="50px" align="center">
-                  曜日
+                  曜 日
                 </td>
                 <td width="100px" align="center">
                   シフト
@@ -215,7 +215,7 @@
                   終了時刻
                 </td>
                 <td width="100px" align="center">
-                  休憩
+                  休 憩
                 </td>
                 <td width="100px" align="center">
                   実働時間
@@ -227,7 +227,7 @@
                   休日出勤
                 </td>
                 <td width="220px" align="center">
-                  備考
+                  備 考
                 </td>
               </tr>
             	<logic:iterate id="workRecordInputList" name="workRecordInputForm" property="workRecordInputList" indexId="idx">
@@ -307,7 +307,7 @@
                 　
               </td>
               <td id="footRight">
-                <input value="登録"  type="button" class="TourokuPrintBotan"  onclick="register()" />
+                <input value="登 録"  type="button" class="TourokuPrintBotan"  onclick="register()" />
               </td>
           </tr>
         </table>

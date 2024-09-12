@@ -193,7 +193,7 @@
 				<tr>
 					<td id="headLeft">
 						<%--
-          <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+          <input value="戻 る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             
            --%>
 					</td>
@@ -217,9 +217,9 @@
 						<tr>
 							<td width="100px" align="center">シフト名</td>
 							<td width="70px" align="center">シンボル</td>
-							<td width="230px" align="center">時間</td>
-							<td width="100px" align="center">休憩</td>
-							<td width="70px" align="center">削除</td>
+							<td width="230px" align="center">時 間</td>
+							<td width="100px" align="center">休 憩</td>
+							<td width="70px" align="center">削 除</td>
 						</tr>
 					</table>
 				</div>
@@ -279,7 +279,7 @@
 					<td id="footRight"><input value="新規登録" type="button"
 						class="TourokuPrintBotan" onclick="shiftMstMntRegisterInit()" />
 					</td>
-					<td><input value="更新" type="button" class="KousinBotan"
+					<td><input value="更 新" type="button" class="KousinBotan"
 						onclick="shiftMstMntUpdate()" /></td>
 				</tr>
 			</table>

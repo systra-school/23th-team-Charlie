@@ -47,13 +47,13 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               基本シフト確認
             </td>
             <td id="headRight">
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+              <input value="ログアウト" type="button" class="mOUTbotan"  onclick="logout()" />
             </td>
           </tr>
         </table>
@@ -72,10 +72,10 @@
                     シンボル
                   </td>
                   <td width="150px" align="center">
-                    時間
+                    時 間
                   </td>
                   <td width="50px" align="center">
-                    休憩
+                    休 憩
                   </td>
                 </tr>
               </table>

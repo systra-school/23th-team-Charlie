@@ -179,10 +179,10 @@
                   社員名カナ（半角）
                 </td>
                 <td width="100px" align="center">
-                  権限
+                  権 限
                 </td>
                 <td width="100px" align="center">
-                  削除
+                  削 除
                 </td>
               </tr>
             </table>
@@ -237,7 +237,7 @@
               <input value="新規登録" type="button" class="SinkiBotan"  onclick="employeeMstMntRegisterInit()" />
              </td>
              <td> 
-              <input value="更新" type="button" class="KousinBotan"  onclick="employeeMstMntUpdate()" />
+              <input value="更 新" type="button" class="KousinBotan"  onclick="employeeMstMntUpdate()" />
             </td>
           </tr>
         </table>

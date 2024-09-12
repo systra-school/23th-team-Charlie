@@ -46,7 +46,7 @@ String color = "";
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻 る" type="button" class="ModoruBotan"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
             </td>
             <td id="headCenter">
               勤務実績確認
@@ -88,10 +88,10 @@ String color = "";
             <table class="tableHeader">
               <tr>
                 <td width="70px" align="center">
-                  日付
+                  日 付
                 </td>
                 <td width="50px" align="center">
-                  曜日
+                  曜 日
                 </td>
                 <td width="70px" align="center">
                   シフト
@@ -103,7 +103,7 @@ String color = "";
                   終了時刻
                 </td>
                 <td width="100px" align="center">
-                  休憩
+                  休 憩
                 </td>
                 <td width="100px" align="center">
                   実働時間
@@ -115,7 +115,7 @@ String color = "";
                   休日出勤
                 </td>
                 <td width="250px" align="center">
-                  備考
+                  備 考
                 </td>
               </tr>
             </table>

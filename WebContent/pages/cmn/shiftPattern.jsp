@@ -60,10 +60,10 @@
                     シンボル
                   </td>
                   <td width="150px" align="center">
-                    時間
+                    時 間
                   </td>
                   <td width="50px" align="center">
-                    休憩
+                    休 憩
                   </td>
                 </tr>
               </table>
