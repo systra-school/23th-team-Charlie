@@ -1,17 +1,17 @@
 /* 画像を動的に表示できるコード↓ */
 
-@keyframes backgroundImageAnimation {
-  0% { background-image: url('/kikin-for-Struts-bug/pages/img/fireworks_00005.jpg'); }
-  33% { background-image: url('/kikin-for-Struts-bug/pages/img/Nagaoka_Fireworks_04.jpg'); }
-  66% { background-image: url('/kikin-for-Struts-bug/pages/img/sddefault.jpg'); }
-  100% { background-image: url('/kikin-for-Struts-bug/pages/img/fireworks_00005.jpg'); }
-}
-body {
-  animation: backgroundImageAnimation 15s infinite; /* 15秒で1周、無限ループ */
-  background-size: cover; /* 背景画像が全体に広がるようにする */
-  background-position: center; /* 背景画像を中央に配置 */
-  background-repeat: no-repeat; /* 背景画像の繰り返しを無効にする */
-}
+/* @keyframes backgroundImageAnimation { */
+/*   0% { background-image: url('/kikin-for-Struts-bug/pages/img/fireworks_00005.jpg'); } */
+/*   33% { background-image: url('/kikin-for-Struts-bug/pages/img/Nagaoka_Fireworks_04.jpg'); } */
+/*   66% { background-image: url('/kikin-for-Struts-bug/pages/img/sddefault.jpg'); } */
+/*   100% { background-image: url('/kikin-for-Struts-bug/pages/img/fireworks_00005.jpg'); } */
+/* } */
+/* body { */
+/*   animation: backgroundImageAnimation 15s infinite; 15秒で1周、無限ループ */
+/*   background-size: cover; 背景画像が全体に広がるようにする */
+/*   background-position: center; 背景画像を中央に配置 */
+/*   background-repeat: no-repeat; 背景画像の繰り返しを無効にする */
+/* } */
 
 /*
 * body定義
@@ -221,7 +221,7 @@ errorbody {
 * テーブルボディのスタイル
 */
 .tableBody {
-    background-color: #FAFED6;
+    background-color: #E1FBE1;
     border: 1px solid #FF0000;
     border-collapse: collapse;
 }
