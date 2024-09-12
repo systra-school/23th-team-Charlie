@@ -23,11 +23,18 @@
 <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet"
 	type="text/css" />
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Yuji+Hentaigana+Akari&display=swap');
+</style>
+
 
 </head>
 
 <body style="text-align: left; margin-left: 0px; height: 0; width: 100%">
+	<div class="rogo">㈱KAPPA勤怠管理 <a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/kappa.png" width="3%"
+					height="auto"></a></div>
 	<div id="wrapper">
+		
 
 		<div id="businessBody">
 
@@ -47,10 +54,10 @@
 			<!-- 勤退ボタン -->
 			<div class="Kbotan">
 
-				<a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/uni-1.gif" width="13%"
+				<a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/uni-1.gif" width="11%"
 					height="auto"></a> 
 					
-				<a href="#"><img alt="退勤"src="/kikin-for-Struts-bug/pages/img/odorukome.gif" width="13%"
+				<a href="#"><img alt="退勤"src="/kikin-for-Struts-bug/pages/img/odorukome.gif" width="11%"
 					height="auto"></a> <br>
 					
 				<div class="K2botan">
@@ -68,7 +75,7 @@
 
 	</div>
 
-	<div id="footer">
+	 <!-- <div id="footer">
 		<table>
 			<tr>
 				<td id="footLeft"></td>
@@ -76,7 +83,7 @@
 				<td id="footRight"></td>
 			</tr>
 		</table>
-	</div>
+	</div>  -->
 	
 	<!--　現在時刻取得  スクリプト-->
 	<script>
