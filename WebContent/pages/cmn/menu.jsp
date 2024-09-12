@@ -34,7 +34,7 @@
             <td id="headLeft">
               　
             </td>
-            <td id="headCenter">
+            <td id="headCenter2">
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="authorityId"
                          value="<%=CommonConstant.Authority.ADMIN.getId() %>">
@@ -58,7 +58,7 @@
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="authorityId"
                      value="<%=CommonConstant.Authority.ADMIN.getId() %>">
-          <div  style="margin-left:15%;margin-top:3%;">
+          <div  style="margin-left:15%;margin-top:2%;">
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
               <input type="submit" value="月別シフト確認" class="mbotan" />
@@ -112,7 +112,7 @@
                      property="authorityId"
                      value="<%=CommonConstant.Authority.USER.getId() %>">
           
-          <div  style="margin-left:15%;">
+          <div  style="margin-left:15%;margin-top:3%;">
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
               <input type="submit" value="月別シフト確認" class="mbotan" />
@@ -162,6 +162,6 @@
             </td>
           </tr>
         </table>
-      </div>
+      </div> 
   </body>
 </html>
