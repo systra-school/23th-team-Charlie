@@ -65,6 +65,13 @@
 				</html:form>
 			</div>
 		</div>
+		
+		<div style="text-align: center;">
+		    <a href="/kikin-for-Struts-bug/pages.jsp">パスワードを忘れた方はこちら</a><br>
+		    <img alt="退勤"src="/kikin-for-Struts-bug/pages/img/penginonigiri-1.gif" width="13%" height="auto"><br>
+		    
+		</div>
+		
 		<div id="footer">
 			<table>
 				<tr>
