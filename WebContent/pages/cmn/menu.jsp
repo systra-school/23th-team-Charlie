@@ -87,7 +87,7 @@
           </div>
           
           </div>
-          <div  style="margin-right:10em; margin-top: -20em; max-width:100%;">
+          <div  style="margin-right:14em; margin-top: -21.9em; max-width:100%;">
           <div class="kanriBlock">
            <html:form action="/monthlyShiftInputInit">
               <input type="submit" value="月別シフト入力" class="mbotan" />
