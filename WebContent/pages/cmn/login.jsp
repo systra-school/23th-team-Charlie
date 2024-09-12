@@ -18,7 +18,8 @@
 
 </head>
 <body>
-
+<div class="rogo">㈱KAPPA勤怠管理 <a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/kappa.png" width="3%"
+					height="auto"></a></div>
 
 	<%
   if(session.getAttribute("error")!=null){
@@ -44,7 +45,9 @@
 		
 		<div id="businessBody">
 			<div align="center">
+			<br>
 				<div>ID・パスワードを入力してください。</div>
+				<br>
 				<html:form action="/login" onsubmit="return validateLoginForm(this)">
 					
 					<%-- 2024/09/09
@@ -56,19 +59,24 @@
 					<html:password property="password" size="16" redisplay="false"/>
 					<br />
 					<br />
-					<html:submit property="submit" value="ログイン" />
+					<div class="Logbotan">
+					<html:submit property="submit" value="ログイン" styleClass="Log2"/>
+					</div>
+					
 					
 					<%-- 2024/09/09 田中 >>
 					property="reset"を追加しました。 --%>
-					<html:reset property="reset" value="リセット" />
+					<div class="Resetbotan">
+					<html:reset property="reset" value="リセット" styleClass="Re2"/>
+					</div>
 					
 				</html:form>
 			</div>
 		</div>
 		
-		<div style="text-align: center;">
+		<div style="text-align: center;padding-top:45px;padding-left:10px;">
 		    <a href="/kikin-for-Struts-bug/pages/cmn/password.jsp">パスワードを忘れた方はこちら</a><br>
-		    <img alt="退勤"src="/kikin-for-Struts-bug/pages/img/penginonigiri-1.gif" width="13%" height="auto"><br>
+		    <img alt="退勤"src="/kikin-for-Struts-bug/pages/img/penginonigiri-1.gif" width="13%" height="auto" style="padding-top:50px;padding-left:30px;"><br>
 		    
 		</div>
 		
