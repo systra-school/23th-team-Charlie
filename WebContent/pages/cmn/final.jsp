@@ -92,7 +92,7 @@
   </audio>
  
   <div class="content-wrapper">
-    <a href="/kikin-for-Struts-bug/pages/cmn/login.jsp" class="link-text">Team Charlieでした～</a>
+    <a href="/kikin-for-Struts-bug/pages/cmn/login.jsp" class="link-text">株式会社C☆ストラでした～</a>
     <a>Congratulations To Everyone</a>
   </div>
   <br>
