@@ -195,7 +195,8 @@
           2024/08/26 田中 >> テーブルが分かれていたので一つにまとめました。
           -->
             
-            <div style="height:450px;  margin-left: 18px ">
+               <div style="overflow: auto; height: 400px; width: 1088px; margin: 0 auto;" >
+
             	
             	<table class="tableBody">
             	<tr class="tableHeader">
@@ -230,6 +231,7 @@
                   備 考
                 </td>
               </tr>
+              
             	<logic:iterate id="workRecordInputList" name="workRecordInputForm" property="workRecordInputList" indexId="idx">
               
                 <tr>
@@ -296,6 +298,7 @@
           </div>
           </div>
         </html:form>
+        
       </div>
       <div id="footer">
         <table>
