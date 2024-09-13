@@ -118,7 +118,7 @@
               社員マスタメンテナンス（新規登録）
             </td>
             <td id="headRight">
-           　<input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+           　<input value="ログアウト" type="button" class="mOUTbotan"  onclick="logout()" />
             </td>
           </tr>
         </table>
@@ -180,7 +180,7 @@
               　
             </td>
             <td id="footRight">
-              <input value="登録" type="button" class="smallButton"  onclick="employeeMstMntRegister()" />
+              <input value="登録" type="button" class="TourokuPrintBotan"  onclick="employeeMstMntRegister()" />
             </td>
           </tr>
         </table>
@@ -190,7 +190,7 @@
 	<div class="target" id="banner" style="display: none;">
 		<div id="flyin" class="stopanimate">
 			<a href="https://systra-school.com/">
-				<img src="/kikin-for-Struts-bug/pages/img/kyujin.jpg" alt="バナー画像" width="100%">
+				<img src="/kikin-for-Struts-bug/pages/img/kyujin2.jpg" alt="バナー画像" width="100%">
 			</a>
 			<button class="flyinclose button"></button>
 		</div>
@@ -214,4 +214,7 @@
 	</script>
 
   </body>
+  <footer>
+		<%@include file="/pages/cmn/footer.jsp" %>
+</footer>
 </html>
