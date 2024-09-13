@@ -23,11 +23,12 @@
     <title>メニュー画面</title>
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
-  <body><div class="kintai">
+  <body>
+  	
+    <div id="wrapper">
+   <div class="kintai">
       <%@ include file="/pages/cmn/kintai.jsp" %>
       </div>
-    <div id="wrapper">
-   
        <div id="header">
         <table class="full-width">
           <tr>
@@ -144,24 +145,29 @@
           
           </div>
            </logic:equal>
-        </div>          
+        </div>
        
       </div>
       
-      <div id="footer">
-        <table>
-          <tr>
-            <td id="footLeft">
-              　
-            </td>
-            <td id="footCenter">
-              　
-            </td>
-            <td id="footRight">
-              　
-            </td>
-          </tr>
-        </table>
-      </div> 
+      
+<!--       <div id="footer"> -->
+<!--         <table> -->
+<!--           <tr> -->
+<!--             <td id="footLeft"> -->
+<!--               　 -->
+<!--             </td> -->
+<!--             <td id="footCenter"> -->
+<!--               　 -->
+<!--             </td> -->
+<!--             <td id="footRight"> -->
+<!--               　 -->
+<!--             </td> -->
+<!--           </tr> -->
+<!--         </table> -->
+<!--       </div>  -->
+      
+      
   </body>
+
 </html>
+

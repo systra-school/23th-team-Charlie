@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<div class="rogo">㈱KAPPA勤怠管理 <a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/kappa.png" width="3%"
+<div class="rogo">KAPPA勤怠管理 <a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/kappa.png" width="3%"
 					height="auto"></a></div>
 
 	<%
@@ -80,15 +80,21 @@
 		    
 		</div>
 		
-		<div id="footer">
-			<table>
-				<tr>
-					<td id="footLeft"></td>
-					<td id="footCenter"></td>
-					<td id="footRight"></td>
-				</tr>
-			</table>
-		</div>
-	</div>
+<!-- 		<div id="footer"> -->
+<!-- 			<table> -->
+<!-- 				<tr> -->
+<!-- 					<td id="footLeft"></td> -->
+<!-- 					<td id="footCenter"></td> -->
+						 
+					
+<!-- 					<td id="footRight"></td> -->
+<!-- 				</tr> -->
+<!-- 			</table> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+	
 </body>
+<footer>
+<%@include file="/pages/cmn/footer.jsp" %>
+</footer>
 </html>

@@ -31,7 +31,7 @@
 </head>
 
 <body style="text-align: left; margin-left: 0px; height: 0; width: 100%">
-	<div class="rogo">㈱KAPPA勤怠管理 <a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/kappa.png" width="3%"
+	<div class="rogo">KAPPA勤怠管理 <a href="#"><img alt="出勤"src="/kikin-for-Struts-bug/pages/img/kappa.png" width="3%"
 					height="auto"></a></div>
 	<div id="wrapper">
 		
@@ -78,18 +78,11 @@
 			</div>
 
 		</div>
-
+<footer>
+<%@include file="/pages/cmn/footer.jsp" %>
+</footer>
 	</div>
 
-	 <!-- <div id="footer">
-		<table>
-			<tr>
-				<td id="footLeft"></td>
-				<td id="footCenter"></td>
-				<td id="footRight"></td>
-			</tr>
-		</table>
-	</div>  -->
 	
 	<!--　現在時刻取得  スクリプト-->
 	<script>
