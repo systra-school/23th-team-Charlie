@@ -456,7 +456,7 @@ errorbody {
   color: #400040;
   cursor: pointer;
   margin-top: -2px;
-  margin-left:120px;
+  margin-left:890px;
   box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
   text-align: center;
@@ -482,7 +482,7 @@ errorbody {
   color: #400040;
   cursor: pointer;
   margin-top: -2px;
-  margin-left:120px;
+  margin-left:230px;
   box-shadow: 0 2px 0 #757266;
   border-radius: 5px;
   text-align: center;
@@ -528,7 +528,7 @@ errorbody {
   color: #400040;
   cursor: pointer;
   margin-top: -2px;
-  margin-left:120px;
+  margin-left:-120px;
   box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
   text-align: center;
@@ -551,7 +551,7 @@ errorbody {
   color: #400040;
   cursor: pointer;
   margin-top: -2px;
-  margin-left:120px;
+  margin-left:20px;
   box-shadow: 0 2px 0 #757266;
   border-radius: 5px;
   text-align: center;
@@ -647,11 +647,11 @@ errorbody {
 
 .Re2:hover {
   -webkit-transform: rotateZ(180deg);
-  transform: rotateZ(2880deg);
+  transform: rotateZ(360deg);
   -webkit-transition: -webkit-transform 0.4s ease-out;
   transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out, -webkit-transform 02.4s ease-out;
+  transition: transform 00.1s ease-out;
+  transition: transform 00.1s ease-out, -webkit-transform 00.4s ease-out;
 }
 
 .Re2:hover:after {
