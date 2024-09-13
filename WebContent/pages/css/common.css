@@ -341,7 +341,6 @@ errorbody {
   text-align: center;
   width: 200px;
   font-family: "M PLUS Rounded 1c", sans-serif;
- 
 }
 /* 一般社員　勤退ボタンホバー */
 .s2btn:hover {
@@ -351,6 +350,12 @@ errorbody {
 .t2btn:hover {
   margin-top: 0;
   box-shadow: 0 5px 0 #a81f0f;
+  
+}
+.t2div:hover{
+	width:100%;
+	margin-top: -260px;
+	
 }
 
 /* 一般社員　勤退ボタン画面レイアウト設定 */
@@ -633,20 +638,20 @@ errorbody {
   cursor: pointer;
   border-radius: 5px;
   -webkit-transform: rotateZ(360deg);
-  transform: rotateZ(360deg);
+  transform: rotateZ(-180deg);
   -webkit-transition: -webkit-transform 0.4s ease-out;
   transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 02.4s ease-out;
 }
 
 .Re2:hover {
   -webkit-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
+  transform: rotateZ(2880deg);
   -webkit-transition: -webkit-transform 0.4s ease-out;
   transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 02.4s ease-out;
 }
 
 .Re2:hover:after {

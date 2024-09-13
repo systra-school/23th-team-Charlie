@@ -65,7 +65,13 @@
     				<html:form action="/workAttendanceRegister">
         				<input type="submit" value="出勤" class="s2btn" />
 				    </html:form>
-					<input type="submit" value="退勤" class="t2btn" />
+				    <div class="t2div">
+				    <div class="t2divsub">
+				    <input type="submit" value="退勤" class="t2btn" />
+				    </div>
+				    	
+				    </div>
+					
 				</div>
 
 
