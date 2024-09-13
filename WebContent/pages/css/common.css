@@ -670,3 +670,141 @@ errorbody {
   -webkit-transform: rotateZ(180deg);
   transform: rotateZ(180deg);
 }
+
+/* 右側の追従バナーエリア */
+#flyin {
+    z-index: 100;
+    border-radius: 10px 0 0;
+    -moz-border-radius: 10px 0 0;
+    -webkit-border-radius: 10px 0 0;
+    width: 360px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    -webkit-backface-visibility: visible !important;
+    -ms-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation: flipInY 1s cubic-bezier(0.77, 0, .175, 1);
+    -moz-animation: flipInY 1s cubic-bezier(0.77, 0, .175, 1);
+    -o-animation: flipInY 1s cubic-bezier(0.77, 0, .175, 1);
+    animation: flipInY 1s cubic-bezier(0.77, 0, .175, 1);
+    -webkit-transition: bottom .5s ease, background-position .5s ease;
+    transition: bottom .5s ease, background-position .5s ease;
+    padding: 0;
+    filter: drop-shadow(0px 0px 7px #aaa);
+    transition: 0.3s ease-in-out;
+}
+
+#flyin .flyin-man {
+    position: absolute;
+    right: 5%;
+    top: 110px;
+    z-index: 3;
+    width: 82px;
+    height: 130px;
+    display: block;
+    background-image: url(//cdn.elegantthemes.com/images/flyin-man.png);
+    -webkit-animation: float 3s infinite;
+    -moz-animation: float 3s infinite;
+    -o-animation: float 3s infinite;
+    animation: float 3s infinite;
+    -webkit-transition: top 1s ease, opacity 1s ease;
+    transition: top 1s ease, opacity 1s ease;
+}
+
+#flyin #flying_subscribe {
+    -webkit-transition: opacity .5s ease, background-color .5s ease;
+    transition: opacity .5s ease, background-color .5s ease;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: none;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Goudy Bookletter 1911', arial, sans-serif;
+    background: #55a753;
+    text-align: center;
+    cursor: pointer;
+    padding: 11px 0 10px;
+}
+
+#flyin #flying_subscribe:hover,
+#flyin .flyinbutton:hover {
+    background-color: #408c3f;
+}
+
+#flyin #exit_emailinput {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 220px;
+    background: #f8fafa;
+    border: 1px solid #e4e9e9;
+    color: #b3b3b3;
+    font-size: 13px;
+    margin: 0 0 10px;
+    padding: 11px 20px;
+}
+
+#flyin .flyinclose {
+    -webkit-transition: 0 .5s ease .2s, opacity .5s ease, top .5s ease .2s;
+    transition: transform .5s ease .2s, opacity .5s ease, top .5s ease .2s;
+    content: '';
+    display: block;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: #fff url(//cdn.elegantthemes.com/img/exitpopup-x.png) no-repeat center center;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    margin: 0;
+    padding: 0;
+}
+
+#flyin .flyinbutton {
+    -webkit-transition: top .5s ease, opacity .5s ease, background-color .5s ease;
+    transition: top .5s ease, opacity .5s ease, background-color .5s ease;
+    width: 300px;
+    height: 20px;
+    top: 400px;
+    opacity: 0;
+    position: absolute;
+    left: 10px;
+    z-index: 5;
+    display: block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Goudy Bookletter 1911', arial, sans-serif;
+    background: #55a753;
+    text-align: center;
+    cursor: pointer;
+    padding: 11px 0 10px;
+}
+
+.hide {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.hide div {
+    top: 60% !important;
+    -webkit-transition: top 1s ease;
+    transition: top 1s ease;
+}
+footer{
+	width: 100%;
+	text-align: center;
+	background-color: #88dfec;
+}
