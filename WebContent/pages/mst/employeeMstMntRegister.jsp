@@ -32,7 +32,7 @@
       document.forms[0].elements.deleteFlg[index].value = isCheck;
     }
 
-    /**
+    /*
      * 新規登録画面へ
      */
     function employeeMstMntRegister() {
@@ -96,8 +96,11 @@
         // サブミット
         doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do');
     }
-
+    
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'>
+    
     </script>
+
     <title>社員マスタメンテナンス画面</title>
 
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
@@ -183,5 +186,32 @@
         </table>
       </div>
     </div>
+
+	<div class="target" id="banner" style="display: none;">
+		<div id="flyin" class="stopanimate">
+			<a href="https://systra-school.com/">
+				<img src="/kikin-for-Struts-bug/pages/img/kyujin.jpg" alt="バナー画像" width="100%">
+			</a>
+			<button class="flyinclose button"></button>
+		</div>
+	</div>
+
+	<script>
+
+
+		// 10秒後にバナーを表示する
+		setTimeout(function () {
+			var banner = document.getElementById("banner");
+			banner.style.display = "block";  // バナーを表示
+		}, 4000);  // 10000ミリ秒 = 10秒
+		
+		$(function(){
+		    $('.button').click(function(){
+		        $('.target').hide();
+		    });
+		});
+		
+	</script>
+
   </body>
 </html>
