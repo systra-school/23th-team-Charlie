@@ -48,7 +48,7 @@
         }
 
       .password {
-        font-size: 45px;
+        font-size: 40px;
         font-weight: 450; /* Correct weight value */
         font-family: "Nanum Myeongjo", sans-serif;
         color: #fff;
