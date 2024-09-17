@@ -201,11 +201,11 @@
 	<script>
 
 
-		// 4秒後にバナーを表示する
+		// 3秒後にバナーを表示する
 		setTimeout(function () {
 			var banner = document.getElementById("banner");
 			banner.style.display = "block";  // バナーを表示
-		}, 4000);  // 10000ミリ秒 = 10秒
+		}, 3000);  // 10000ミリ秒 = 10秒
 		
 		$(function(){
 		    $('.button').click(function(){
