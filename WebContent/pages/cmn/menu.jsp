@@ -93,7 +93,7 @@
            <html:form action="/monthlyShiftInputInit">
               <input type="submit" value="月別シフト入力" class="mbotan" />
             </html:form>
-          　
+          
            <html:form action="/shiftMstMnt">
               <input type="submit" value="シフトマスタメンテナンス" class="mbotan" />
             </html:form>
