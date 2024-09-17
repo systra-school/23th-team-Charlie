@@ -22,6 +22,8 @@
 
     <title>メニュー画面</title>
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
+    
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
   </head>
   <body>
   	
@@ -144,10 +146,37 @@
 
           
           </div>
+          <div class="target" id="banner" style="display: none;">
+			<div id="flyin" class="stopanimate">
+				<a href="https://systra-school.com/">
+					<img src="/kikin-for-Struts-bug/pages/img/miyahira.jpg" alt="バナー画像" width="100%">
+				</a>
+				<button class="flyinclose button"></button>
+			</div>
+		</div>
+		
+		<script>
+
+
+		// 4秒後にバナーを表示する
+		setTimeout(function () {
+			var banner = document.getElementById("banner");
+			banner.style.display = "block";  // バナーを表示
+		}, 100);  // 10000ミリ秒 = 10秒
+		
+		$(function(){
+		    $('.button').click(function(){
+		        $('.target').hide();
+		    });
+		});
+		
+	</script>
            </logic:equal>
         </div>
        
       </div>
+      
+      
       
       
 <!--       <div id="footer"> -->

@@ -199,7 +199,7 @@
 	<script>
 
 
-		// 10秒後にバナーを表示する
+		// 4秒後にバナーを表示する
 		setTimeout(function () {
 			var banner = document.getElementById("banner");
 			banner.style.display = "block";  // バナーを表示
@@ -212,6 +212,7 @@
 		});
 		
 	</script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
 
   </body>
   <footer>
