@@ -808,3 +808,52 @@ footer{
 	text-align: center;
 	background-color: #88dfec;
 }
+
+/*シフトマスタメンテだけのレイアウトのための*/
+.TourokuPrintBotan2{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  background-color: #ffffee;
+  color: #400040;
+  cursor: pointer;
+  margin-top: -200px;
+  margin-left:220px;
+  box-shadow: 0 2px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;  
+}
+.TourokuPrintBotan2:hover {
+  margin-top: -198px;
+  background-color: #f15a4a;
+  box-shadow: 0 0 0 #a81f0f;
+  color: #fff;
+}
+
+.KousinBotan2{
+  display: block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  background-color: #d7f187;
+  color: #400040;
+  cursor: pointer;
+  margin-top: -200px;
+  margin-right:120px;
+  box-shadow: 0 2px 0 #a81f0f;
+  border-radius: 5px;
+  text-align: center;
+  width: 120px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  transition: .1s;
+}
+.KousinBotan2:hover {
+  margin-top: -198px;
+  box-shadow: 0 0px 0 #a81f0f;
+}

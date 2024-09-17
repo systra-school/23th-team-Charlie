@@ -268,6 +268,8 @@
 							</tr>
 						</logic:iterate>
 					</table>
+					
+					
 				</div>
 			</html:form>
 		</div>
@@ -277,9 +279,9 @@
 					<td id="footLeft"></td>
 					<td id="footCenter"></td>
 					<td id="footRight"><input value="新規登録" type="button"
-						class="TourokuPrintBotan" onclick="shiftMstMntRegisterInit()" />
+						class="TourokuPrintBotan2" onclick="shiftMstMntRegisterInit()" />
 					</td>
-					<td><input value="更 新" type="button" class="KousinBotan"
+					<td><input value="更 新" type="button" class="KousinBotan2"
 						onclick="shiftMstMntUpdate()" /></td>
 				</tr>
 			</table>
