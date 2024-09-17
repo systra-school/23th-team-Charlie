@@ -111,15 +111,18 @@ errorbody {
     float:left;
     width:400px;
     text-align:left;
+    height: 30px;
 }
 #footCenter {
     width:100%;
     text-align:center;
+    height: 30px;
 }
 #footRight {
     float:right;
     width:400px;
     text-align:right;
+    height: 30px;
 }
 /*
 * エラーページ ヘッダー、フッター共通定義
@@ -819,7 +822,7 @@ footer{
   background-color: #ffffee;
   color: #400040;
   cursor: pointer;
-  margin-top: -200px;
+  margin-top: 0px;
   margin-left:220px;
   box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
@@ -829,7 +832,7 @@ footer{
   transition: .1s;  
 }
 .TourokuPrintBotan2:hover {
-  margin-top: -198px;
+  margin-top: 2px;
   background-color: #f15a4a;
   box-shadow: 0 0 0 #a81f0f;
   color: #fff;
@@ -844,7 +847,7 @@ footer{
   background-color: #d7f187;
   color: #400040;
   cursor: pointer;
-  margin-top: -200px;
+  margin-top: 0px;
   margin-right:120px;
   box-shadow: 0 2px 0 #a81f0f;
   border-radius: 5px;
@@ -854,6 +857,6 @@ footer{
   transition: .1s;
 }
 .KousinBotan2:hover {
-  margin-top: -198px;
+  margin-top: 2px;
   box-shadow: 0 0px 0 #a81f0f;
 }

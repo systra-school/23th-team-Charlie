@@ -224,7 +224,7 @@
 					</table>
 				</div>
 				<div
-					style="overflow: auto; height: 80%; width: 600px; margin: 0 auto;">
+					style="overflow: auto; height: auto; width: 600px; margin: 0 auto;">
 					<table class="tableBody">
 						<logic:iterate indexId="idx" id="shiftMstMntBeanList"
 							name="shiftMstMntForm" property="shiftMstMntBeanList">
