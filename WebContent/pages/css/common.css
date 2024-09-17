@@ -860,3 +860,10 @@ footer{
   margin-top: 2px;
   box-shadow: 0 0px 0 #a81f0f;
 }
+
+.m-plus-rounded-1c-thin {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 100px;
+  font-style: normal;
+  text-align: center;
+}

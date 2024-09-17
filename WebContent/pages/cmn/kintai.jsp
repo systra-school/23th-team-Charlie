@@ -25,6 +25,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Yuji+Hentaigana+Akari&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
 </style>
 
 
@@ -48,8 +49,10 @@
 			<div class="realtime">
 				<p id="realtime"></p>
 			</div>
-
-			<p style="text-align: center;">${emp_str}</p>
+			
+			<div class="m-plus-rounded-1c-thin">		
+				<p>${emp_str}</p>
+			</div>
 			
 			<!-- 勤退ボタン -->
 			<div class="Kbotan">
