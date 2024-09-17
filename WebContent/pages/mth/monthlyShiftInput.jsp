@@ -65,7 +65,7 @@ if (listSize > intShowLength) {
      */
     function submitWorkDateRequest() {
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/monthlyShiftInputWorkDateRequest.do');
+        window.open('/kikin-for-Struts-bug/monthlyShiftInputWorkDateRequest.do', "blank", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=2300px, height=300px");
     }
 
     /**
@@ -489,7 +489,7 @@ if (listSize > intShowLength) {
             <input value="基本シフト反映" type="button" class="HanneiBotan"   onclick="submitImportKihon()"/>
             </td>
             <td>
-            <input value="出勤希望日反映" type="button" class="HanneiBotan"  onclick="submitWorkDateRequest()" />
+            <input value="みんなの希望確認" type="button" class="HanneiBotan"  onclick="submitWorkDateRequest()" />
             </td>
             <td id="footCenter" style="text-align: right;">
 
